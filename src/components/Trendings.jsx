@@ -8,7 +8,9 @@ import trending6 from "../assets/trending6.png";
 import trending7 from "../assets/trending7.png";
 import trending8 from "../assets/trending8.png";
 import proflie from '../assets/proflie.png'
-const Trendings = () => {
+import PropTypes from 'prop-types';
+
+const Trendings = ({title}) => {
   const nfts = [
     {
       id: 1,
@@ -73,7 +75,7 @@ const Trendings = () => {
       <div className="container max-w-6xl mx-auto ">
         {/* Heading */}
         <h1 style={{ marginLeft: "16px" }} className="text-4xl font-extrabold text-gray-800 mb-8" >
-          Trending NFTs
+          {title}
         </h1>
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4  ">
@@ -125,4 +127,7 @@ const Trendings = () => {
   );
 };
 
+Trendings.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 export default Trendings;

@@ -128,7 +128,7 @@ const TrendingNFTs = () => {
         <div className="flex justify-center items-center mt-10">
           {/* <Link to="/auctionpage"> */}
             <button className="bg-red-500 text-white px-8 py-3 rounded-lg hover:bg-red-600 transition">
-              Explore
+              Explore More
             </button>
           {/* </Link> */}
         </div>
