@@ -66,7 +66,7 @@ const TopSeller = () => {
         {sellers.map((seller) => (
           <div
             key={seller.id}
-            className="flex items-center p-4 shadow-md rounded-lg bg-white "
+            className="flex items-center p-4 shadow-md rounded-lg bg-white  w-[250px] h-[121px]"
           >
             {/* Icon */}
             <img
