@@ -7,7 +7,7 @@ import trending5 from "../assets/trending5.png";
 import trending6 from "../assets/trending6.png";
 import trending7 from "../assets/trending7.png";
 import trending8 from "../assets/trending8.png";
-// import icon from "../Images/icon.png"
+import proflie from '../assets/proflie.png'
 const Trendings = () => {
   const nfts = [
     {
@@ -76,18 +76,18 @@ const Trendings = () => {
           Trending NFTs
         </h1>
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4   ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4  ">
           {nfts.map((nft) => (
             <div
               key={nft.id}
-              className="bg-white rounded-lg  shadow-lg  w-[270px] h-[411px] overflow-hidden hover:scale-105  transform transition duration-300 relative border border-gray-200"
+              className="bg-white rounded-lg  shadow-lg  w-[270px] h-[392px] overflow-hidden hover:scale-105  transform transition duration-300 relative border border-gray-200"
             >
               {/* Top Section with Icon and Name */}
               <div className="flex items-center gap-4 p-4">
                 {/* Icon */}
                 <div className="bg-gray-200 p-2 rounded-full">
                   <img
-                    src=""
+                    src={proflie}
                     alt={nft.username}
                     className="w-10 h-10 rounded-full "
                   />
@@ -105,7 +105,7 @@ const Trendings = () => {
                 <img
                   src={nft.image}
                   alt={nft.title}
-                  className="rounded-lg object-cover w-[292px] h-[314px]"
+                  className="rounded-md object-cover w-[292px] h-[314px]"
                 />
                 {/* Buttons on the Image */}
                 <div className="absolute inset-0 flex items-end justify-between p-4 bg-gradient-to-t from-black/50 to-transparent">
