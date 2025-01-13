@@ -23,7 +23,7 @@ function Footer() {
           <input
             type="email"
             placeholder="info@gmail.com"
-            className="w-full p-4 rounded-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-300"
+            className="w-[680px] h-[96px] p-4 rounded-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-300 border border-red-300"
             style={{ height: "96px" }}
           />
           <button
