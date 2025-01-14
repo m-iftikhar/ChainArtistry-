@@ -1,6 +1,6 @@
 import logo from '../assets/logo.png';
 import logotext from '../assets/logotext.png';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -13,12 +13,30 @@ const Navbar = () => {
 
       {/* Navigation */}
       <div className="flex items-center space-x-8 w[331px] h-[79px] top-[35px] left-[642px] gap-[35px] rounded-[6px] py-[15px] px-[25px]">
-        <Link to="/" className="text-lg font-semibold text-gray-700 hover:text-gray-900">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `text-lg font-semibold ${
+              isActive
+                ? 'text-red-500 underline decoration-red-500'
+                : 'text-gray-700 hover:text-gray-900'
+            }`
+          }
+        >
           Home
-        </Link>
-        <Link to="/nftpage" className="text-lg font-semibold text-gray-700 hover:text-gray-900">
+        </NavLink>
+        <NavLink
+          to="/nftpage"
+          className={({ isActive }) =>
+            `text-lg font-semibold ${
+              isActive
+                ? 'text-red-500 underline decoration-red-500'
+                : 'text-gray-700 hover:text-gray-900'
+            }`
+          }
+        >
           AI NFT GENERATION
-        </Link>
+        </NavLink>
       </div>
 
       {/* Buttons */}
