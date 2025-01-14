@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import collection1 from '../assets/collection1.png';
 import collection2 from '../assets/collection2.png';
 import collection3 from '../assets/collection3.png';
@@ -35,9 +36,10 @@ const TopCollections = () => {
         <div className='flex gap-[600px] '>
       <h2 className="text-4xl font-bold mb-6">Top Collections</h2>
     
-        <h1 className=" text-red-600 w-400 font-bold text-2xl  ">
+       <Link to="/topcollections"> <h1 className=" text-red-600 w-400 font-bold text-2xl  ">
           View More Collections
         </h1>
+         </Link>
         </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6">
