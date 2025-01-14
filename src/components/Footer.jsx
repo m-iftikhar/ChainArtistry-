@@ -9,7 +9,7 @@ function Footer() {
     <div>
       {/* Email Section */}
       <div
-        className="text-center"
+        className="text-center "
         style={{
           paddingTop: "48px",
           paddingBottom: "48px",
@@ -38,7 +38,7 @@ function Footer() {
 
       {/* Footer Section */}
       <div
-        className="bg-gradient-to-r from-red-500 to-red-600 text-white flex flex-col items-center relative bottom-4 "
+        className="bg-gradient-to-r from-red-500 to-red-600 text-white flex flex-col items-center relative bottom-4  "
         style={{
           width: "1320px",
           margin: "0 auto",
