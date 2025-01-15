@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import collection1 from '../assets/collection1.png';
 import collection2 from '../assets/collection2.png';
@@ -32,26 +31,31 @@ const TopCollections = () => {
   ];
 
   return (
-    <div className="w-[1319px] h-[428px] p-8">
-        <div className='flex gap-[600px] '>
-      <h2 className="text-4xl font-bold mb-6">Top Collections</h2>
-    
-       <Link to="/topcollections"> <h1 className=" text-red-600 w-400 font-bold text-2xl  ">
-          View More Collections
-        </h1>
-         </Link>
-        </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6">
+    <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      {/* Header Section */}
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-8 text-center sm:text-left">
+        <h2 className="font-apex text-[64px] font-normal leading-[76.8px] tracking-[0.04em] text-left decoration-skip-ink">
+          Top Collections
+        </h2>
+        <Link to="/topcollections" className="mt-2 sm:mt-0">
+          <h2 className="text-blue-600 font-medium hover:underline text-lg">
+            View More Collection
+          </h2>
+        </Link>
+      </div>
+
+      {/* Collection Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
         {collections.map((collection, index) => (
-          <CollectionCard  key={index}
-          title={collection.title}
-          creator={collection.creator}
-          creatorImage={collection.creatorImage}
-          images={collection.images}/>
+          <CollectionCard
+            key={index}
+            title={collection.title}
+            creator={collection.creator}
+            creatorImage={collection.creatorImage}
+            images={collection.images}
+          />
         ))}
       </div>
-    
     </div>
   );
 };

@@ -13,15 +13,29 @@ const FAQ = () => {
       answer:
         "An NFT (Non-Fungible Token) is a unique digital asset stored on the blockchain, representing ownership of items like art, music, or collectibles.",
     },
-    { question: "How do I buy an NFT?", answer: "To buy an NFT, set up a crypto wallet, connect it to an NFT marketplace, and use cryptocurrency to purchase your desired NFT." },
-    { question: "How do I sell an NFT?", answer: "To sell an NFT, list it on an NFT marketplace, set your price, and wait for a buyer to complete the transaction." },
-    { question: "What cryptocurrencies do you accept?", answer: "We accept popular cryptocurrencies like Ethereum, Bitcoin, and USDT, but the specific options depend on the marketplace." },
+    {
+      question: "How do I buy an NFT?",
+      answer:
+        "To buy an NFT, set up a crypto wallet, connect it to an NFT marketplace, and use cryptocurrency to purchase your desired NFT.",
+    },
+    {
+      question: "How do I sell an NFT?",
+      answer:
+        "To sell an NFT, list it on an NFT marketplace, set your price, and wait for a buyer to complete the transaction.",
+    },
+    {
+      question: "What cryptocurrencies do you accept?",
+      answer:
+        "We accept popular cryptocurrencies like Ethereum, Bitcoin, and USDT, but the specific options depend on the marketplace.",
+    },
   ];
 
   return (
-    <div className=" text-white  flex items-center justify-center p-6">
-      <div className="w-full max-w-xl">
-        <h1 className="text-4xl font-bold text-black font-apex mb-6 text-center">FREQUENTLY ASKED QUESTIONS</h1>
+    <div className="text-white flex items-center justify-center px-4 py-6">
+      <div className="w-full max-w-3xl">
+        <h1 className="text-3xl md:text-4xl font-bold text-black font-apex mb-6 text-center">
+          FREQUENTLY ASKED QUESTIONS
+        </h1>
         {faqs.map((faq) => (
           <div
             key={faq.question}
@@ -35,12 +49,14 @@ const FAQ = () => {
               }`}
               onClick={() => toggle(faq.question)}
             >
-              <h2 className="text-lg font-bold">{faq.question}</h2>
-              <span>{open === faq.question ? "-" : "+"}</span>
+              <h2 className="text-base sm:text-lg md:text-xl font-bold">{faq.question}</h2>
+              <span className="text-lg">{open === faq.question ? "-" : "+"}</span>
             </div>
             {open === faq.question && (
               <div className="p-4 bg-gray-900">
-                <p className="text-gray-300">{faq.answer}</p>
+                <p className="text-gray-300 text-sm sm:text-base md:text-lg">
+                  {faq.answer}
+                </p>
               </div>
             )}
           </div>
