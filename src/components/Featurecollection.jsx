@@ -33,15 +33,13 @@ const Featurecollection = () => {
   };
 
   return (
-    <div className="py-10 px-5 w-full mt-[50px]">
+    <div className="py-10 px-5 w-full mt-[150px]">
       <div className="relative max-w-6xl mx-auto">
         {/* Title and Subtext */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-5">
           <div>
-            <h2 className="text-xl md:text-3xl font-bold ml-2 md:ml-0">
-              Featured Collection
-            </h2>
-            <p className="text-gray-500 text-sm md:text-base ml-2 md:ml-0">
+            <h2 className="text-3xl font-bold ml-4 md:ml-0">Featured Collection</h2>
+            <p className="text-gray-500 ml-4 md:ml-0">
               Explore our exclusive featured collection, showcasing innovative.
             </p>
           </div>
@@ -50,13 +48,13 @@ const Featurecollection = () => {
           <div className="flex space-x-4 mt-4 md:mt-0">
             <button
               onClick={handlePrev}
-              className="bg-red-600 text-white px-4 py-2 text-xs md:text-sm rounded-full hover:bg-red-400 shadow-lg"
+              className="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-300 shadow-lg"
             >
               &#9664; {/* Previous */}
             </button>
             <button
               onClick={handleNext}
-              className="bg-red-600 text-white px-4 py-2 text-xs md:text-sm rounded-full hover:bg-red-400 shadow-lg"
+              className="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-300 shadow-lg"
             >
               &#9654; {/* Next */}
             </button>
@@ -68,20 +66,16 @@ const Featurecollection = () => {
           {cards.slice(currentIndex, currentIndex + cardsPerSlide).map((card) => (
             <div
               key={card.id}
-              className="relative w-[90%] sm:w-[308px] h-auto md:w-[270px] mx-2 mb-4 p-4 bg-white rounded-lg shadow-lg transition-all duration-500 ease-in-out transform scale-100"
+              className="relative w-full sm:w-[270px] md:w-[270px] lg:w-[308px] mx-2 mb-4 md:mb-0 p-4 bg-white rounded-lg shadow-lg transition-all duration-500 ease-in-out transform scale-100"
             >
               {/* Profile Section at the Top */}
               <div className="flex items-center space-x-3 mb-3">
-                <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 font-bold">
+                <div className="w-10 h-10 bg-gray-300 rounded-full border-[0.78px] flex items-center justify-center text-gray-700 font-bold">
                   {card.name.charAt(0)} {/* Placeholder for an icon */}
                 </div>
                 <div>
-                  <p className="text-gray-800 font-semibold text-sm md:text-[18px]">
-                    {card.name}
-                  </p>
-                  <p className="text-gray-500 text-xs md:text-[11px]">
-                    {card.description}
-                  </p>
+                  <p className="text-gray-800 font-semibold text-[18px]">{card.name}</p>
+                  <p className="text-gray-500 text-[11px]">{card.description}</p>
                 </div>
               </div>
 
@@ -90,14 +84,15 @@ const Featurecollection = () => {
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="rounded-lg object-cover w-full md:w-[292px] h-[200px] md:h-[314px]"
+                  className="rounded-lg object-cover w-full h-[314px]"
+                  style={{ objectFit: 'cover' }}
                 />
                 {/* Buttons on the bottom of the image */}
                 <div className="absolute inset-x-0 bottom-0 flex justify-between p-2">
-                  <button className="bg-red-500 text-white px-4 py-1 md:py-2 text-xs md:text-sm rounded-lg hover:bg-red-600">
+                  <button className="bg-red-500 text-white px-4 py-2 text-[12px] rounded-lg hover:bg-red-600">
                     Buy
                   </button>
-                  <p className="bg-white bg-opacity-75 text-gray-800 font-bold px-3 py-1 md:py-2 rounded-lg text-xs md:text-sm">
+                  <p className="bg-white bg-opacity-75 text-gray-800 font-bold px-3 py-2 rounded-lg">
                     Price: {card.price}
                   </p>
                 </div>

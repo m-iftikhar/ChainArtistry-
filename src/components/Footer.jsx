@@ -1,30 +1,18 @@
-
-
 import { FaTelegram, FaTwitter, FaInstagram, FaLinkedin, FaYoutube, FaDiscord, FaTiktok } from "react-icons/fa";
 import Logo from "../assets/logo.png";
-import logotext from '../assets/logotext.png'
+import logotext from '../assets/logotext.png';
 
 function Footer() {
   return (
     <div>
       {/* Email Section */}
-      <div
-        className="text-center "
-        style={{
-          paddingTop: "48px",
-          paddingBottom: "48px",
-        }}
-      >
+      <div className="text-center py-12">
         <h2 className="text-3xl font-bold mb-6">Ready for the Next NFT Drop?</h2>
-        <div
-          className="relative mx-auto font-apex"
-          style={{ width: "680px", height: "96px" }}
-        >
+        <div className="relative mx-auto font-apex" style={{ maxWidth: "680px" }}>
           <input
             type="email"
             placeholder="info@gmail.com"
-            className="w-[680px] h-[96px] p-4 rounded-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-300 border border-red-300"
-            style={{ height: "96px" }}
+            className="w-full h-24 p-4 rounded-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-300 border border-red-300"
           />
           <button
             className="absolute top-1/2 right-3 transform -translate-y-1/2 bg-red-700 hover:bg-red-800 text-white p-3 rounded-full shadow-lg transition"
@@ -37,39 +25,23 @@ function Footer() {
       </div>
 
       {/* Footer Section */}
-      <div
-        className="bg-gradient-to-r from-red-500 to-red-600 text-white flex flex-col items-center relative bottom-4  "
-        style={{
-          width: "1320px",
-          margin: "0 auto",
-          paddingTop: "40px",
-          paddingBottom: "40px",
-          borderRadius: "20px",
-        }}
-      >
-        <div
-          className="flex justify-evenly items-center w-full"
-          style={{
-            width: "90%",
-            maxWidth: "1200px",
-          }}
-        >
+      <div className="bg-gradient-to-r from-red-500 to-red-600 text-white flex flex-col items-center py-10 px-4 sm:px-8 lg:px-16 rounded-lg  relative bottom-2 shadow-lg">
+        <div className="flex flex-col sm:flex-row justify-evenly items-center w-full max-w-screen-xl">
           {/* Column 1: Logo */}
-          <div className="flex flex-col items-center text-center">
+          <div className="flex flex-col items-center text-center mb-8 sm:mb-0">
             <img
               src={Logo}
               alt="Fry Networks Logo"
-              className="w-20 h-20 mb-4 filter invert "
+              className="w-20 h-20 mb-4 filter invert"
             />
-            <img src={logotext} alt="logotext" className=' filter invert hue-rotate-180'/>
+            <img src={logotext} alt="logotext" className="filter invert hue-rotate-180" />
           </div>
 
           {/* Column 2: Description & Social Media Links */}
-          <div className="text-center">
+          <div className="text-center mb-8 sm:mb-0">
             <h3 className="text-xl font-apex mb-4">Fry Networks</h3>
-            <p className="text-sm font-apex mb-4">
-              NFT ALGO is the worlds leading NFTs marketplace where you can <br />
-              discover, sell and bid NFTs and get rich.
+            <p className="text-sm font-apex mb-4 max-w-xs sm:max-w-none">
+              NFT ALGO is the world’s leading NFTs marketplace where you can discover, sell, and bid NFTs and get rich.
             </p>
             <div className="flex justify-center gap-4 mt-4">
               <a href="#" className="hover:text-gray-200">
@@ -101,24 +73,16 @@ function Footer() {
             <h4 className="text-lg font-apex mb-2">About</h4>
             <ul className="text-sm space-y-2">
               <li>
-                <a href="#" className="hover:underline   font-apex">
-                  About NFT
-                </a>
+                <a href="#" className="hover:underline font-apex">About NFT</a>
               </li>
               <li>
-                <a href="#" className="hover:underline font-apex">
-                  Live Auctions
-                </a>
+                <a href="#" className="hover:underline font-apex">Live Auctions</a>
               </li>
               <li>
-                <a href="#" className="hover:underline font-apex">
-                  Collection
-                </a>
+                <a href="#" className="hover:underline font-apex">Collection</a>
               </li>
               <li>
-                <a href="#" className="hover:underline font-apex">
-                  Activity
-                </a>
+                <a href="#" className="hover:underline font-apex">Activity</a>
               </li>
             </ul>
           </div>

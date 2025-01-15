@@ -1,21 +1,42 @@
-
 import PropTypes from 'prop-types';
 
 const CollectionCard = ({ title, creator, creatorImage, images }) => (
-  <div className="border rounded-lg shadow-md p-4  bg-white hover:shadow-lg transition w-[417px] h-[301px] ">
-    <div className="grid grid-cols-3 gap-2 mb-4">
-      {images.slice(0, 6).map((image, index) => (
-        <img key={index} src={image} alt={`${title} ${index + 1}`} className="w-full h-auto rounded" />
-      ))}
-    </div>
-    <div className="flex items-center">
-      <img src={creatorImage} alt={creator} className="w-10 h-10 rounded-md border mr-3" />
-      <div>
-        <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="text-gray-500 text-sm">Created by {creator}</p>
+  <div className="border rounded-lg shadow-lg p-4 w-full max-w-sm mx-auto transition-transform hover:scale-105">
+      {/* Large Images Grid */}
+      <div className="grid grid-cols-2 gap-2 mb-4">
+        {images.slice(0, 2).map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt="Artwork"
+            className="rounded-lg w-full h-32 object-cover"
+          />
+        ))}
+      </div>
+      {/* Small Images Grid */}
+      <div className="grid grid-cols-4 gap-2 mb-4">
+        {images.slice(2, 6).map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt="Artwork"
+            className="rounded-lg w-full h-24 object-cover"
+          />
+        ))}
+      </div>
+      {/* Creator Info */}
+      <div className="flex items-center gap-4">
+        <img
+          src={creatorImage}
+          alt={creator}
+          className="w-10 h-10 rounded-full border-2 border-blue-500"
+        />
+        <div>
+          <p className="font-bold text-lg">{title}</p>
+          <p className="text-gray-500 text-sm">Created by {creator}</p>
+        </div>
       </div>
     </div>
-  </div>
 );
 
 CollectionCard.propTypes = {
