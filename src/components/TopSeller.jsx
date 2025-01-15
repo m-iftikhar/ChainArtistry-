@@ -1,5 +1,6 @@
-import topseller from '../assets/topseller.png'
+import topseller from "../assets/topseller.png";
 // import { Link } from "react-router-dom";
+
 const sellers = [
   {
     id: 1,
@@ -53,12 +54,12 @@ const sellers = [
 
 const TopSeller = () => {
   return (
-    <div className="container max-w-6xl mx-auto px-4">
+    <div className="container max-w-6xl mx-auto px-4 py-8">
       {/* Header Section */}
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-4xl font-bold">TOP SELLER</h2>
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-2xl md:text-4xl font-bold">TOP SELLER</h2>
         {/* <Link to='/viewallseller'> */}
-        <h3 className="text-red-500 font-medium">View All</h3>
+        <h3 className="text-red-500 font-medium cursor-pointer">View All</h3>
         {/* </Link> */}
       </div>
       {/* Sellers Grid */}
@@ -66,17 +67,19 @@ const TopSeller = () => {
         {sellers.map((seller) => (
           <div
             key={seller.id}
-            className="flex items-center p-4 shadow-md rounded-lg bg-white  w-[250px] h-[121px]"
+            className="flex items-center p-4 shadow-md rounded-lg bg-white w-full max-w-[270px] mx-auto"
           >
             {/* Icon */}
             <img
               src={seller.icon}
               alt={seller.name}
-              className="w-[116px] h-[116px] rounded-md"
+              className="w-[90px] h-[90px] sm:w-[100px] sm:h-[100px] md:w-[116px] md:h-[116px] rounded-md"
             />
             {/* Text Section */}
             <div className="ml-4">
-              <h3 className="text-lg font-semibold">{seller.name}</h3>
+              <h3 className="text-base md:text-lg font-semibold">
+                {seller.name}
+              </h3>
               <p className="text-sm text-gray-500">{seller.price}</p>
             </div>
           </div>
