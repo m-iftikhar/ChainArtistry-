@@ -11,7 +11,7 @@ const Herotop = () => {
         style={{ width: '100%', maxWidth: '512px', height: '310px' }}
       >
         <h1
-          className="font-bold text-black leading-none text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+          className="font-extrabold text-black font-apex leading-none text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
           style={{ fontWeight: 700 }}
         >
           <span className="uppercase">NFT</span> <br />

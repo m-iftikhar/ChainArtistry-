@@ -20,7 +20,7 @@ function App() {
       <div className="min-h-screen font-apex bg-gray-50">
         {/* Hero Section */}
         <div className="text-center mt-8 px-4">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl  font-apex font-bold text-gray-800">
             CREATE YOUR OWN <span className="text-red-600">MASTERPIECE</span>
           </h1>
         </div>
@@ -34,7 +34,7 @@ function App() {
           />
         </div>
 
-        <div className="text-center font-apex mt-4 text-gray-700 text-sm sm:text-base">
+        <div className="text-center font-roboto mt-4 text-gray-700 text-sm sm:text-base">
           Get OnBoard And Earn Money Like Pro
         </div>
 
@@ -44,11 +44,11 @@ function App() {
             <input
               type="text"
               placeholder="Fantasy Creature holding a sword..."
-              className="flex-grow bg-transparent outline-none text-gray-700"
+              className="flex-grow bg-transparent outline-none font-roboto text-gray-700"
             />
             <button
               onClick={handleGenerateClick}
-              className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 text-sm sm:text-base"
+              className="bg-red-600 text-white px-4 py-2 font-roboto rounded-lg hover:bg-red-700 text-sm sm:text-base"
             >
               Generate
             </button>
@@ -57,7 +57,7 @@ function App() {
 
         {/* Dropdowns and Add Styles Button */}
         <div className="flex flex-wrap justify-evenly items-center mt-8 space-y-4 sm:space-y-0 sm:space-x-4 px-4">
-          <div className="bg-gray-100 rounded-lg p-2 shadow-md w-full sm:w-auto">
+          <div className="bg-gray-100 rounded-lg p-2 font-roboto shadow-md w-full sm:w-auto">
             <select className="w-full sm:w-auto bg-transparent outline-none text-gray-700 font-apex cursor-pointer">
               <option>Single NFT</option>
               <option>Batch NFT</option>
@@ -75,7 +75,7 @@ function App() {
 
           <Link to="/nftpagemint">
             <button className="flex items-center bg-gray-100 rounded-lg p-2 shadow-md space-x-2">
-              <span className="text-gray-700 font-apex">Add Styles</span>
+              <span className="text-gray-700 font-roboto">Add Styles</span>
               <FaPlus className="text-gray-700" />
             </button>
           </Link>
@@ -95,11 +95,11 @@ function App() {
               >
                 <FaTimes size={20} />
               </button>
-              <h2 className="text-center text-2xl font-semibold mb-6">Generate NFT</h2>
+              <h2 className="text-center text-2xl font-apex font-semibold mb-6">Generate NFT</h2>
               <div className="flex flex-col space-y-6">
                 <div>
                   <label className="block font-medium mb-2">Type</label>
-                  <select className="w-full bg-gray-100 text-gray-700 p-3 rounded-md border border-red-500 outline-none">
+                  <select className="w-full bg-gray-100 font-roboto text-gray-700 p-3 rounded-md border border-red-500 outline-none">
                     <option>Single NFT</option>
                     <option>Collectible</option>
                     <option>Gaming</option>
@@ -107,17 +107,17 @@ function App() {
                 </div>
 
                 <div>
-                  <label className="block  font-medium mb-2">Prompt</label>
+                  <label className="block  font-medium font-roboto mb-2">Prompt</label>
                   <input
                     type="text"
                     placeholder="Describe your NFT..."
-                    className="w-full bg-gray-100 p-3 border border-red-500 rounded-lg outline-none"
+                    className="w-full bg-gray-100 p-3 border font-roboto border-red-500 rounded-lg outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block  font-medium mb-2">Payment Method</label>
-                  <select className="w-full bg-gray-100 p-3 outline-none">
+                  <label className="block  font-medium mb-2 font-roboto">Payment Method</label>
+                  <select className="w-full bg-gray-100 p-3 font-roboto outline-none">
                     <option>Credit Card</option>
                     <option>Crypto Wallet</option>
                     <option>PayPal</option>
@@ -126,7 +126,7 @@ function App() {
 
                 <button
                   onClick={handleCloseModal}
-                  className="bg-red-600 text-white py-2 px-6 rounded-xl mr-11 hover:bg-red-700 mx-auto"
+                  className="bg-red-600 text-white py-2 px-6 rounded-xl font-roboto mr-11 hover:bg-red-700 mx-auto"
                 >
                   Confirm
                 </button>

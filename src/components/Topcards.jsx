@@ -58,7 +58,7 @@ const Topcards = () => {
     <div className="min-h-screen px-6 lg:px-20 py-10 mt-10">
       
       <h2
-        className="text-4xl md:text-5xl font-apex text-gray-800 mb-10"
+        className="text-3xl md:text-4xl font-apex font-bold  text-gray-800 mb-10"
         style={{ marginLeft: "2%" }}
       >
         EXPLORE OUR COLLECTIONS
@@ -72,7 +72,7 @@ const Topcards = () => {
         {categories.map((category, index) => (
           <button
             key={index}
-            className={`px-6 py-3 rounded-full font-semibold ${
+            className={`px-6 py-3 rounded-full font-roboto font-semibold ${
               category === "Popular"
                 ? "bg-red-500 text-white"
                 : "bg-gray-100 text-gray-800 hover:bg-gray-200"
@@ -98,8 +98,8 @@ const Topcards = () => {
                 className="w-12 h-12 rounded-full"
               />
               <div>
-                <h3 className="text-lg font-semibold">{card.title}</h3>
-                <p className="text-sm font-apex text-gray-500">
+                <h3 className="text-lg font-semibold font-apex">{card.title}</h3>
+                <p className="text-sm  text-gray-500 font-roboto">
                   Created by {card.creator}
                 </p>
               </div>
@@ -112,7 +112,7 @@ const Topcards = () => {
                 alt={card.title}
                 className="w-full h-64 object-cover"
               />
-              <div className="absolute bottom-0 left-0 w-full text-black bg-opacity-60 text-center text-sm font-semibold py-2 rounded-t-lg">
+              <div className="absolute bottom-0 font-roboto left-0 w-full text-black bg-opacity-60 text-center text-sm font-semibold py-2 rounded-t-lg">
                 Items: {card.items}
               </div>
             </div>

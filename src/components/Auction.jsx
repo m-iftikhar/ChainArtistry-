@@ -25,7 +25,7 @@ const TrendingNFTs = () => {
         {/* Heading */}
         <h1
           style={{ marginLeft: '16px' }}
-          className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-8"
+          className="text-3xl md:text-4xl font-bold font-apex text-gray-800 mb-8"
         >
           Auctions
         </h1>
@@ -47,10 +47,10 @@ const TrendingNFTs = () => {
                   />
                 </div>
                 <div>
-                  <h2 className="text-base md:text-lg font-semibold text-gray-800">
+                  <h2 className="text-base font-apex md:text-lg font-semibold text-gray-800">
                     {nft.title}
                   </h2>
-                  <p className="text-sm text-gray-500">{nft.username}</p>
+                  <p className="text-sm text-gray-500 font-roboto">{nft.username}</p>
                 </div>
               </div>
 
@@ -80,7 +80,7 @@ const TrendingNFTs = () => {
 
         {/* Explore Button */}
         <div className="flex justify-center items-center mt-10">
-          <button className="bg-red-500 text-white px-8 py-3 rounded-lg hover:bg-red-600 transition text-sm md:text-base">
+          <button className="bg-red-500 text-white px-8 font-roboto py-3 rounded-lg hover:bg-red-600 transition text-sm md:text-base">
             Explore More
           </button>
         </div>

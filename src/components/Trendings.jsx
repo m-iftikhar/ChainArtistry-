@@ -27,7 +27,7 @@ const Trendings = ({ title }) => {
         {/* Heading */}
         <h1
           style={{ marginLeft: "16px" }}
-          className="text-4xl font-extrabold text-gray-800 mb-8"
+          className="text-4xl font-apex font-bold text-gray-800 mb-8"
         >
           {title}
         </h1>
@@ -46,12 +46,12 @@ const Trendings = ({ title }) => {
                   <img
                     src={proflie}
                     alt={nft.username}
-                    className="w-10 h-10 rounded-full"
+                    className="w-10 h-10 rounded-full font-apex"
                   />
                 </div>
                 {/* Text */}
                 <div>
-                  <h2 className="text-lg font-semibold text-gray-800">
+                  <h2 className="text-lg font-semibold font-roboto text-gray-800">
                     {nft.title}
                   </h2>
                   <p className="text-sm text-gray-500">{nft.username}</p>

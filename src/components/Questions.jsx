@@ -33,7 +33,7 @@ const FAQ = () => {
   return (
     <div className="text-white flex items-center justify-center px-4 py-6">
       <div className="w-full max-w-3xl">
-        <h1 className="text-3xl md:text-4xl font-bold text-black font-apex mb-6 text-center">
+        <h1 className="text-3xl md:text-4xl font-extrabold  text-black font-apex mb-6 text-center">
           FREQUENTLY ASKED QUESTIONS
         </h1>
         {faqs.map((faq) => (
@@ -41,7 +41,7 @@ const FAQ = () => {
             key={faq.question}
             className={`border ${
               open === faq.question ? "border-red-500" : "border-gray-700"
-            } rounded-md mb-4 font-apex overflow-hidden`}
+            } rounded-md mb-4 font-roboto overflow-hidden`}
           >
             <div
               className={`flex justify-between text-black items-center p-4 cursor-pointer ${

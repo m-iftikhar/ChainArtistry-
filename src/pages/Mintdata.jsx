@@ -2,6 +2,7 @@ import mint1 from '../assets/mint1.png';
 import { FaPlus,FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
 
+
 const Mintdata = () => {
   const [showTraitsModal, setShowTraitsModal] = useState(false);
 
@@ -33,48 +34,48 @@ const Mintdata = () => {
         className="rounded-lg shadow-md bg-white p-4 sm:p-6 md:p-8"
         style={{ maxWidth: '944px', width: '100%' }}
       >
-        <h1 className="text-xl sm:text-2xl font-bold text-center mb-4">MINT YOUR NFT</h1>
+        <h1 className="text-3xl sm:text-2xl font-bold font-apex text-center mb-4">MINT YOUR NFT</h1>
 
         
         <div className="mb-6">
-          <h3 className="mb-2 font-medium">Item Name*</h3>
+          <h3 className="mb-2 font-medium  font-roboto">Item Name*</h3>
           <input
             type="text"
-            className="w-full h-[58px] rounded-lg border-gray-300 border px-4 outline-none"
+            className="w-full h-[58px] font-roboto rounded-lg border-gray-300 border px-4 outline-none"
             placeholder="Name Your NFT"
           />
         </div>
 
         
         <div className="mb-6">
-          <h3 className="text-gray-700 mb-2 font-medium">Token Symbol*</h3>
+          <h3 className="text-gray-700 mb-2 font-roboto font-medium">Token Symbol*</h3>
           <input
             type="text"
-            className="w-full h-[58px] rounded-lg border-gray-300 border px-4 outline-none"
+            className="w-full h-[58px] font-roboto rounded-lg border-gray-300 border px-4 outline-none"
             placeholder="CGPT, for example"
           />
         </div>
 
         
         <div className="mb-6">
-          <h3 className="mb-2 font-medium">Description</h3>
+          <h3 className="mb-2 font-roboto font-medium">Description</h3>
           <textarea
-            className="w-full h-[158px] rounded-lg border-gray-300 border p-4 outline-none resize-none"
+            className="w-full h-[158px] font-roboto rounded-lg border-gray-300 border p-4 outline-none resize-none"
             placeholder="Provide a detailed description of the item"
           ></textarea>
         </div>
 
         
-        <div className="mb-6">
+        <div className="mb-6 font-roboto">
           <p className="font-medium mb-2">Choose a collection:</p>
           <p className="text-gray-500 mb-4">This is the collection where your item will appear.</p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 font-roboto">
             <div className="flex items-center px-4 py-2 rounded-lg bg-white border border-gray-300 shadow-md">
               <img src={mint1} className="w-[61px] h-[61px] rounded-lg object-cover" alt="Collection" />
               <span className="text-gray-700 font-medium ml-4">Wonderful Artworks</span>
             </div>
 
-            <div className="flex items-center px-4 py-2 rounded-lg bg-white border border-gray-300 shadow-md">
+            <div className="flex items-center px-4 font-roboto py-2 rounded-lg bg-white border border-gray-300 shadow-md">
               <FaPlus className="w-[61px] h-[61px] rounded-lg bg-gray-200 p-2" />
               <span className="text-gray-700 font-medium ml-4">Create New Collection</span>
             </div>
@@ -82,7 +83,7 @@ const Mintdata = () => {
         </div>
 
         
-        <div className="mb-6">
+        <div className="mb-6 font-roboto">
           <p className="mb-2 text-lg font-semibold">Add Traits</p>
           <p className="mb-4 text-gray-600">
             Traits describe attributes of your item. They appear as filters inside 
@@ -97,7 +98,7 @@ const Mintdata = () => {
         </div>
 
         
-        <div className="mb-6">
+        <div className="mb-6 font-roboto">
           <h3 className="text-gray-700 mb-2 font-medium">Royalties</h3>
           <label htmlFor="royalties" className="flex items-center cursor-pointer">
             <div className="relative">
@@ -110,7 +111,7 @@ const Mintdata = () => {
 
         
         <button
-          className="w-full sm:w-[139px] h-[53px] rounded-lg bg-gradient-to-r from-[#d65d5d] to-[rgba(253,0,0,1)] text-white text-lg font-medium mt-6"
+          className="w-full font-roboto sm:w-[139px] h-[53px] rounded-lg bg-gradient-to-r from-[#d65d5d] to-[rgba(253,0,0,1)] text-white text-lg font-medium mt-6"
         >
           Mint
         </button>
@@ -118,7 +119,7 @@ const Mintdata = () => {
 
       
       {showTraitsModal && (
-        <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
+        <div className="fixed inset-0 font-roboto flex justify-center items-center bg-black bg-opacity-50 z-50">
           <div
             className="bg-white rounded-lg p-6 shadow-lg relative"
             style={{ width: '618px', height: '342px' }}

@@ -19,7 +19,7 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `text-lg font-semibold ${
+            `text-lg font-semibold font-apex ${
               isActive
                 ? 'text-red-500 underline decoration-red-500'
                 : 'text-gray-700 hover:text-gray-900'
@@ -31,7 +31,7 @@ const Navbar = () => {
         <NavLink
           to="/nftpage"
           className={({ isActive }) =>
-            `text-lg font-semibold ${
+            `text-lg font-semibold font-apex ${
               isActive
                 ? 'text-red-500 underline decoration-red-500'
                 : 'text-gray-700 hover:text-gray-900'
@@ -75,10 +75,10 @@ const Navbar = () => {
 
       {/* Buttons */}
       <div className="hidden md:flex space-x-4 w-[404px] h-[58px] top-[46px] left-[1216px] rounded-[8px] gap-[10px]">
-        <button className="px-4 py-2 w-[213px] h-[58px] rounded-[8px] bg-gradient-to-r from-[#d65d5d] to-[rgba(253,0,0,1)] text-white text-[22px] font-medium">
+        <button className="px-4 font-roboto py-2 w-[213px] h-[58px] rounded-[8px] bg-gradient-to-r from-[#d65d5d] to-[rgba(253,0,0,1)] text-white text-[22px] font-medium">
           Connect Wallet
         </button>
-        <button className="px-4 py-2 text-red-600 rounded bg-white w-[176px] h-[58px] border-red-600 border-[1.8px] text-[22px] font-medium">
+        <button className="px-4 py-2 font-roboto text-red-600 rounded bg-white w-[176px] h-[58px] border-red-600 border-[1.8px] text-[22px] font-medium">
           Create NFT
         </button>
       </div>

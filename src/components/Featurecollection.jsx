@@ -16,7 +16,7 @@ const Featurecollection = () => {
     { id: 6, image: feature4, price: "34$", title: "Card 6", name: "stellsnova", description: "stella nova" },
   ];
 
-  const cardsPerSlide = 4;
+  const cardsPerSlide = 3;  // Show 3 cards per slide for desktop
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
@@ -38,8 +38,8 @@ const Featurecollection = () => {
         {/* Title and Subtext */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-5">
           <div>
-            <h2 className="text-3xl font-bold ml-4 md:ml-0">Featured Collection</h2>
-            <p className="text-gray-500 ml-4 md:ml-0">
+            <h2 className="text-4xl font-apex font-bold ml-4 md:ml-0">Featured Collection</h2>
+            <p className="text-gray-500 font-roboto ml-4 md:ml-0">
               Explore our exclusive featured collection, showcasing innovative.
             </p>
           </div>
@@ -74,8 +74,8 @@ const Featurecollection = () => {
                   {card.name.charAt(0)} {/* Placeholder for an icon */}
                 </div>
                 <div>
-                  <p className="text-gray-800 font-semibold text-[18px]">{card.name}</p>
-                  <p className="text-gray-500 text-[11px]">{card.description}</p>
+                  <p className="text-gray-800 font-semibold font-apex text-[18px]">{card.name}</p>
+                  <p className="text-gray-500 font-roboto text-[11px]">{card.description}</p>
                 </div>
               </div>
 

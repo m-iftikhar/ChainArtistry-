@@ -7,7 +7,7 @@ function Footer() {
     <div>
       {/* Email Section */}
       <div className="text-center py-12">
-        <h2 className="text-3xl font-bold mb-6">Ready for the Next NFT Drop?</h2>
+        <h2 className="text-4xl font-bold mb-6 font-oxanium">Ready for the Next NFT Drop?</h2>
         <div className="relative mx-auto font-apex" style={{ maxWidth: "680px" }}>
           <input
             type="email"
