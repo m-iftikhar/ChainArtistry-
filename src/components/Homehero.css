@@ -26,15 +26,15 @@
     }
   }
   
-  .animate-left-right {
+  .animation-l-to-r {
     animation: leftRight 2s infinite;
   }
   
-  .animate-right-left {
+  .animation-r-to-l {
     animation: rightLeft 2s infinite;
   }
   
-  .animate-up-down {
+  .animation-u-to-d {
     animation: upDown 2s infinite;
   }
   

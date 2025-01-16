@@ -11,7 +11,7 @@ const Hero = () => {
     <div className="relative flex flex-col items-center  justify-center text-center px-4 py-8 h-screen md:px-2 md:py-8">
 
 
-      {/* Single Image with Embedded Background */}
+    
       <div
         className="absolute flex items-center justify-center mt-0"
         style={{
@@ -25,14 +25,14 @@ const Hero = () => {
         }}
       >
         <div className="absolute w-[800px] h-[400px] bg-red-500 opacity-30 shadow-lg" style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)", filter: "blur(100px)", marginTop: '20px' }}></div>
-        <div className="absolute transform -rotate-4 left-[-60px] top-[42px] w-[225.69px] h-[300.71px] animate-left-right" style={{ marginTop: '20px' }}>
+        <div className="absolute transform -rotate-4 left-[-60px] top-[42px] w-[225.69px] h-[300.71px] animation-l-to-r" style={{ marginTop: '20px' }}>
           <img
             src={heroimage1}
             alt="Hero Image 3"
             className="relative z-10 rounded-lg w-full h-full"
           />
         </div>
-        <div className="absolute transform -rotate-4 left-[80px] top-[19.04px] w-[266.67px] h-[355.31px] animate-left-right" style={{ marginTop: '20px' }}>
+        <div className="absolute transform -rotate-4 left-[80px] top-[19.04px] w-[266.67px] h-[355.31px] animation-l-to-r" style={{ marginTop: '20px' }}>
           <img
             src={heroimage2}
             alt="Hero Image 4"
@@ -42,7 +42,7 @@ const Hero = () => {
         <img
           src={heroimage3}
           alt="Hero Image 1"
-          className="relative z-20 rounded-lg w-[308.36px] h-[410.96px] animate-up-down"
+          className="relative z-20 rounded-lg w-[308.36px] h-[410.96px] animation-u-to-d"
           style={{
             left: "0px",
             gap: "0px",
@@ -52,14 +52,14 @@ const Hero = () => {
             marginTop: '20px',
           }}
         />
-        <div className="absolute transform rotate-4 right-[70px] top-[19.04px] w-[266.67px] h-[355.31px] z-10 animate-right-left" style={{ marginTop: '20px' }}>
+        <div className="absolute transform rotate-4 right-[70px] top-[19.04px] w-[266.67px] h-[355.31px] z-10 animation-r-to-l" style={{ marginTop: '20px' }}>
           <img
             src={heroimage5}
             alt="Hero Image 2"
             className="relative z-10 rounded-lg w-full h-full"
           />
         </div>
-        <div className="absolute transform rotate-4 right-[-90px] top-[42px] w-[225.69px] h-[300.71px] z-0 animate-right-left" style={{ marginTop: '20px' }}>
+        <div className="absolute transform rotate-4 right-[-90px] top-[42px] w-[225.69px] h-[300.71px] z-0 animation-r-to-l" style={{ marginTop: '20px' }}>
           <img
             src={heroimage4}
             alt="Hero Image 5"
@@ -68,7 +68,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Background Hands Image */}
+      
       <img
         src={hands}
         alt="Hands Background"

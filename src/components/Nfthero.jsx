@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import nfthero from '../assets/nfthero.png';
 import { Link } from 'react-router-dom';
-import { FaPlus } from 'react-icons/fa';
-import { FaTimes } from 'react-icons/fa'; // Importing the close icon
+import { FaPlus, FaTimes } from 'react-icons/fa';
 import ReactDOM from 'react-dom';
 
 function App() {
@@ -18,31 +17,30 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen font-apex">
+      <div className="min-h-screen font-apex bg-gray-50">
         {/* Hero Section */}
-        <div className="text-center mt-12" style={{ width: '100%' }}>
-          <h1 className="text-4xl font-apex font-bold text-gray-800 md:text-4xl">
-            CREATE YOUR OWN <span className="text-red-600 text-4xl">MASTERPIECE</span>
+        <div className="text-center mt-8 px-4">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800">
+            CREATE YOUR OWN <span className="text-red-600">MASTERPIECE</span>
           </h1>
         </div>
 
         {/* Centered Image */}
-        <div
-          className="flex justify-center items-center mt-6 mx-auto"
-          style={{ maxWidth: '1332px', height: '100%', marginTop: '132px' }}
-        >
+        <div className="flex justify-center items-center mt-6 px-4 lg:mt-12">
           <img
-            className="rounded-lg shadow-md w-full h-auto object-cover md:w-[1320px] md:h-[496px]"
+            className="rounded-lg shadow-md w-full sm:w-[90%] md:w-[80%] lg:w-[1320px] object-cover"
             src={nfthero}
             alt="NFT"
           />
         </div>
 
-        <div className="text-center font-apex mt-4">Get OnBoard And Earn Money Like Pro</div>
+        <div className="text-center font-apex mt-4 text-gray-700 text-sm sm:text-base">
+          Get OnBoard And Earn Money Like Pro
+        </div>
 
         {/* Search Bar */}
-        <div className="mt-8 px-4 md:px-6" style={{ width: '1002px', margin: '0 auto', height: '70px' }}>
-          <div className="bg-gray-100 rounded-lg font-apex flex items-center p-4 shadow-md h-full">
+        <div className="mt-8 px-4 sm:px-6">
+          <div className="bg-gray-100 rounded-lg font-apex flex items-center p-4 shadow-md w-full max-w-lg mx-auto">
             <input
               type="text"
               placeholder="Fantasy Creature holding a sword..."
@@ -50,7 +48,7 @@ function App() {
             />
             <button
               onClick={handleGenerateClick}
-              className="bg-red-600 text-white font-apex px-4 py-2 rounded-lg hover:bg-red-700"
+              className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 text-sm sm:text-base"
             >
               Generate
             </button>
@@ -58,10 +56,9 @@ function App() {
         </div>
 
         {/* Dropdowns and Add Styles Button */}
-        <br />
-        <div className="flex justify-evenly items-center space-x-4" style={{ width: '100%', margin: '0 auto' }}>
-          <div className="bg-gray-100 rounded-lg p-2 shadow-md">
-            <select className="bg-transparent outline-none text-gray-700 font-apex cursor-pointer">
+        <div className="flex flex-wrap justify-evenly items-center mt-8 space-y-4 sm:space-y-0 sm:space-x-4 px-4">
+          <div className="bg-gray-100 rounded-lg p-2 shadow-md w-full sm:w-auto">
+            <select className="w-full sm:w-auto bg-transparent outline-none text-gray-700 font-apex cursor-pointer">
               <option>Single NFT</option>
               <option>Batch NFT</option>
             </select>
@@ -90,52 +87,46 @@ function App() {
         ReactDOM.createPortal(
           <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
             <div
-              className="bg-white rounded-lg p-6 pb-2 shadow-lg absolute"
-              style={{ width: '415px', height: '580px', borderRadius: '25px' }}
+              className="bg-white rounded-lg p-6 pb-2 shadow-lg w-11/12 max-w-md mx-auto"
             >
-                <button
-              className="absolute top-4 right-4 text-gray-700 hover:text-gray-900"
-              onClick={handleCloseModal}
-            >
-              <FaTimes size={20} />
-            </button>
-              {/* Modal Content */}
+              <button
+                className="absolute top-4 right-4 text-gray-700 hover:text-gray-900"
+                onClick={handleCloseModal}
+              >
+                <FaTimes size={20} />
+              </button>
               <h2 className="text-center text-2xl font-semibold mb-6">Generate NFT</h2>
               <div className="flex flex-col space-y-6">
-                {/* Select Type */}
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">Type</label>
-                  <select className="w-[353px] h-[55px] bg-gray-100 text-gray-400 p-3 rounded-md border border-red-500 outline-none ">
+                  <label className="block font-medium mb-2">Type</label>
+                  <select className="w-full bg-gray-100 text-gray-700 p-3 rounded-md border border-red-500 outline-none">
                     <option>Single NFT</option>
                     <option>Collectible</option>
                     <option>Gaming</option>
                   </select>
                 </div>
 
-                {/* Prompt for Text */}
                 <div>
-                  <label className="block text-gray-400 font-medium mb-2">Prompt</label>
+                  <label className="block  font-medium mb-2">Prompt</label>
                   <input
                     type="text"
                     placeholder="Describe your NFT..."
-                    className="w-full bg-gray-100 p-3 h-20 border border-red-500 rounded-lg outline-none"
+                    className="w-full bg-gray-100 p-3 border border-red-500 rounded-lg outline-none"
                   />
                 </div>
 
-                {/* Payment Method */}
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">Payment Method</label>
-                  <select className="w-[353px] h-[92px] bg-gray-100 p-3 outline-none">
+                  <label className="block  font-medium mb-2">Payment Method</label>
+                  <select className="w-full bg-gray-100 p-3 outline-none">
                     <option>Credit Card</option>
                     <option>Crypto Wallet</option>
                     <option>PayPal</option>
                   </select>
                 </div>
 
-                {/* Confirm Button */}
                 <button
                   onClick={handleCloseModal}
-                  className="w-[144px] h-[43px] bg-gradient-to-r from-[#d65d5d] to-[rgba(253,0,0,1)] text-white ml-[230px] text-[18px] flex items-center justify-center rounded-xl hover:bg-red-700"
+                  className="bg-red-600 text-white py-2 px-6 rounded-xl mr-11 hover:bg-red-700 mx-auto"
                 >
                   Confirm
                 </button>
