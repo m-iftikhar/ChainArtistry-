@@ -1,4 +1,4 @@
-import nextcollectionmain from '../assets/nextcollectionmain.PNG';
+import nextcollectionmain from '../assets/nextcollectionmain.png';
 
 const Herotop = () => {
   return (
