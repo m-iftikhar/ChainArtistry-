@@ -32,7 +32,7 @@ const Navbar = () => {
             }`
           }
         >
-          Home
+          home
         </NavLink>
         <NavLink
           to="/nftpage"
