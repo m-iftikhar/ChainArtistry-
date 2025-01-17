@@ -17,7 +17,7 @@ const Navbar = () => {
       {/* Logo */}
       <div className="flex flex-col items-center h-[100px] w-auto">
         <img src={logo} alt="Logo" className="h-[60px] w-auto" />
-        <img src={logotext} alt="logotext" className="h-[40px] w-auto" />
+        <img src={logotext} alt="logotext" className="h-[20px] w-auto" />
       </div>
 
       {/* Desktop Navigation */}
