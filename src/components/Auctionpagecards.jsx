@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 import auction1 from '../assets/auction1.png';
 import auction2 from '../assets/auction2.png';
 import auction3 from '../assets/auction3.png';
@@ -7,9 +7,9 @@ import auction5 from '../assets/auction5.png';
 import auction6 from '../assets/auction6.png';
 import auction7 from '../assets/auction7.png';
 import proflie from '../assets/proflie.png';
+import PropTypes from "prop-types";
 
-
-const TrendingNFTs = () => {
+const Auctionpagecards = ({title}) => {
   const nfts = [
     { id: 1, title: 'Stella Nova', username: '@stellanova', image: auction1, price: '42.02' },
     { id: 2, title: 'Stella Nova', username: '@stellanova', image: auction2, price: '42.02' },
@@ -29,7 +29,7 @@ const TrendingNFTs = () => {
           style={{ marginLeft: '16px' }}
           className="text-3xl md:text-4xl font-bold font-apex text-gray-800 mb-8"
         >
-          Auctions
+          {title}
         </h1>
 
         {/* Cards Grid */}
@@ -81,17 +81,19 @@ const TrendingNFTs = () => {
         </div>
 
         {/* Explore Button */}
-        <div className="flex justify-center items-center mt-10">
+        {/* <div className="flex justify-center items-center mt-10">
          <Link to="exploreauctions"> <button className="bg-red-500 text-white px-8 font-roboto py-3 rounded-lg hover:bg-red-600 transition text-sm md:text-base">
             Explore More
           </button> </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
 };
 
+Auctionpagecards.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 
-
-export default TrendingNFTs;
+export default Auctionpagecards;
 

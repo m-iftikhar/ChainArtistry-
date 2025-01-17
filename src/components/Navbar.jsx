@@ -1,25 +1,31 @@
-import  { useState } from 'react';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import logotext from '../assets/logotext.png';
-import { NavLink } from 'react-router-dom';
+import Connect from '../components/Connect';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(prev => !prev); // Toggle the modal state
+  };
 
   return (
-    <div className="w-full h-[100px] top-[25px] left-[300px] flex items-center justify-between px-4 bg-white shadow-lg">
+    <div className="w-full h-[100px] flex items-center justify-between px-4 bg-white shadow-lg">
       {/* Logo */}
-      <div className="flex flex-col items-center h-[100px] w-[99.73px] top-[25px] left-[300px]">
+      <div className="flex flex-col items-center h-[100px] w-auto">
         <img src={logo} alt="Logo" className="h-[60px] w-auto" />
         <img src={logotext} alt="logotext" className="h-[40px] w-auto" />
       </div>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center space-x-8 w[331px] h-[79px] top-[35px] left-[642px] gap-[35px] rounded-[6px] py-[15px] px-[25px]">
+      <div className="hidden md:flex items-center space-x-8">
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `text-lg font-semibold font-apex ${
+            `text-lg font-semibold ${
               isActive
                 ? 'text-red-500 underline decoration-red-500'
                 : 'text-gray-700 hover:text-gray-900'
@@ -31,7 +37,7 @@ const Navbar = () => {
         <NavLink
           to="/nftpage"
           className={({ isActive }) =>
-            `text-lg font-semibold font-apex ${
+            `text-lg font-semibold ${
               isActive
                 ? 'text-red-500 underline decoration-red-500'
                 : 'text-gray-700 hover:text-gray-900'
@@ -74,18 +80,21 @@ const Navbar = () => {
       </div>
 
       {/* Buttons */}
-      <div className="hidden md:flex space-x-4 w-[404px] h-[58px] top-[46px] left-[1216px] rounded-[8px] gap-[10px]">
-        <button className="px-4 font-roboto py-2 w-[213px] h-[58px] rounded-[8px] bg-gradient-to-r from-[#d65d5d] to-[rgba(253,0,0,1)] text-white text-[22px] font-medium">
+      <div className="hidden md:flex space-x-4">
+        <button
+          className="px-4 py-2 rounded-[8px] bg-gradient-to-r from-[#d65d5d] to-[rgba(253,0,0,1)] text-white text-[22px] font-medium"
+          onClick={toggleModal} // Toggle modal on button click
+        >
           Connect Wallet
         </button>
-        <button className="px-4 py-2 font-roboto text-red-600 rounded bg-white w-[176px] h-[58px] border-red-600 border-[1.8px] text-[22px] font-medium">
+        <button className="px-4 py-2 font-roboto text-red-600 rounded bg-white border-red-600 border-[1.8px] text-[22px] font-medium">
           Create NFT
         </button>
       </div>
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-[100px] left-0 w-full bg-white shadow-lg flex flex-col space-y-4 px-4 py-6 md:hidden">
+        <div className="absolute top-[100px] left-0 w-full bg-white shadow-lg flex flex-col space-y-4 px-4 py-6">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -112,7 +121,10 @@ const Navbar = () => {
           >
             AI NFT GENERATION
           </NavLink>
-          <button className="px-4 py-2 rounded bg-gradient-to-r from-[#d65d5d] to-[rgba(253,0,0,1)] text-white text-[16px] font-medium">
+          <button
+            className="px-4 py-2 rounded bg-gradient-to-r from-[#d65d5d] to-[rgba(253,0,0,1)] text-white text-[16px] font-medium"
+            onClick={toggleModal} // Toggle modal on button click
+          >
             Connect Wallet
           </button>
           <button className="px-4 py-2 text-red-600 rounded bg-white border-red-600 border-[1.8px] text-[16px] font-medium">
@@ -120,6 +132,9 @@ const Navbar = () => {
           </button>
         </div>
       )}
+
+      {/* Connect Wallet Modal */}
+      {isModalOpen && <Connect toggleModal={toggleModal} />} {/* Pass the toggle function */}
     </div>
   );
 };

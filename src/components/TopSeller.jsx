@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import topseller from "../assets/topseller.png";
 // import { Link } from "react-router-dom";
 
@@ -59,7 +60,8 @@ const TopSeller = () => {
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl md:text-4xl font-apex font-bold">TOP SELLER</h2>
         {/* <Link to='/viewallseller'> */}
-        <h3 className="text-red-500 font-medium font-apex cursor-pointer">View All</h3>
+        <Link to="/viewseller">
+        <h3 className="text-red-500 font-medium font-apex cursor-pointer">View All</h3> </Link>
         {/* </Link> */}
       </div>
       {/* Sellers Grid */}

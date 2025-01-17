@@ -1,42 +1,41 @@
 
 @keyframes leftRight {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(20px);
-    }
+  0%, 100% {
+    transform: translateX(0);
   }
-  
-  @keyframes rightLeft {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(-20px);
-    }
+  50% {
+    transform: translateX(20px);
   }
-  
-  @keyframes upDown {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
+}
+
+@keyframes rightLeft {
+  0%, 100% {
+    transform: translateX(0);
   }
-  
-  .animation-l-to-r {
-    animation: leftRight 2s infinite;
+  50% {
+    transform: translateX(-20px);
   }
-  
-  .animation-r-to-l {
-    animation: rightLeft 2s infinite;
+}
+
+@keyframes upDown {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  .animation-u-to-d {
-    animation: upDown 2s infinite;
+  50% {
+    transform: translateY(-20px);
   }
- 
-  
-  
+}
+
+.animation-l-to-r {
+  animation: leftRight 2s infinite;
+}
+
+.animation-r-to-l {
+  animation: rightLeft 2s infinite;
+}
+
+.animation-u-to-d {
+  animation: upDown 2s infinite;
+}
+
+
