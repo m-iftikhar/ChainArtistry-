@@ -25,7 +25,7 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `text-lg font-semibold ${
+            `text-lg font-semibold uppercase ${
               isActive
                 ? 'text-red-500 underline decoration-red-500'
                 : 'text-gray-700 hover:text-gray-900'
