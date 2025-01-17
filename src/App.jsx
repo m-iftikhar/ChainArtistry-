@@ -10,6 +10,7 @@ import ViewSeller from "./pages/ViewSeller";
 import Auctionpage from "./pages/Auctionpage";
 
 import Chooseexisted from "./pages/Chooseexisted";
+import Newcollection from "./pages/Newcollection";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/viewseller" element={<ViewSeller />} />
         <Route path="/exploreauctions" element={<Auctionpage />} />
         <Route path="/choosecollection" element={<Chooseexisted/>} />
+        <Route path="/newcollection" element={<Newcollection/>} />
       </Routes>
     </Router>
   );

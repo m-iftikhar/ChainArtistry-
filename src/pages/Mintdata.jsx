@@ -16,9 +16,13 @@ const Mintdata = () => {
 
   return (
     <div className="flex flex-col lg:flex-row justify-center items-start p-4 sm:p-6 md:p-8 gap-6 sm:gap-8 bg-gradient-to-b from-pink-50 to-pink-200 min-h-screen">
-      
+       <Link  to="/mintdata">   <button
+          className="absolute top-28 left-3 bg-red-500 text-white text-sm font-medium px-4 py-2 rounded-lg shadow"
+        >
+          Back
+        </button> </Link>
       <div
-        className="rounded-lg p-3 shadow-md bg-white flex justify-center items-center relative"
+        className="rounded-lg p-3 mt-6 shadow-md bg-white flex justify-center items-center relative"
         style={{ width: '296px', height: '309px' }}
       >
         <img
@@ -79,10 +83,10 @@ const Mintdata = () => {
               <span className="text-gray-700 font-medium ml-4">Wonderful Artworks</span>
             </div>
 
-            <div className="flex items-center px-4 font-roboto py-2 rounded-lg bg-white border border-gray-300 shadow-md">
+            <Link to="/newcollection"> <div className="flex items-center px-4 font-roboto py-2 rounded-lg bg-white border border-gray-300 shadow-md">
               <FaPlus className="w-[61px] h-[61px] rounded-lg bg-gray-200 p-2" />
               <span className="text-gray-700 font-medium ml-4">Create New Collection</span>
-            </div>
+            </div></Link>
           </div>
         </div>
 
@@ -93,6 +97,7 @@ const Mintdata = () => {
             Traits describe attributes of your item. They appear as filters inside 
             your collection page and are also listed out inside your item page.
           </p>
+          
           <button
             onClick={handleAddTraitsClick}
             className="flex items-center gap-2 px-4 py-2 border border-gray-400 rounded-xl text-gray-700"
