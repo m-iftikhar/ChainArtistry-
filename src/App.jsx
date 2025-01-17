@@ -9,6 +9,8 @@ import Topcollect from "./pages/Topcollect";
 import ViewSeller from "./pages/ViewSeller";
 import Auctionpage from "./pages/Auctionpage";
 
+import Chooseexisted from "./pages/Chooseexisted";
+
 const App = () => {
   return (
     <Router>
@@ -21,6 +23,7 @@ const App = () => {
         <Route path="/topcollections" element={<Topcollect />} />
         <Route path="/viewseller" element={<ViewSeller />} />
         <Route path="/exploreauctions" element={<Auctionpage />} />
+        <Route path="/choosecollection" element={<Chooseexisted/>} />
       </Routes>
     </Router>
   );

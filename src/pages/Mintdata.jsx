@@ -1,7 +1,7 @@
 import mint1 from '../assets/mint1.png';
 import { FaPlus,FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 
 const Mintdata = () => {
   const [showTraitsModal, setShowTraitsModal] = useState(false);
@@ -67,7 +67,11 @@ const Mintdata = () => {
 
         
         <div className="mb-6 font-roboto">
+          <div className='flex justify-between'>
           <p className="font-medium mb-2">Choose a collection:</p>
+          <Link to="/choosecollection">
+          <p className="font-medium mb-2 text-gray-500  underline">Choose from existed</p> </Link>
+          </div>
           <p className="text-gray-500 mb-4">This is the collection where your item will appear.</p>
           <div className="flex flex-col sm:flex-row gap-4 font-roboto">
             <div className="flex items-center px-4 py-2 rounded-lg bg-white border border-gray-300 shadow-md">

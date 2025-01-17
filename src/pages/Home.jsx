@@ -1,5 +1,5 @@
 import Featurecollection from "../components/Featurecollection";
-import Hero from "../components/Hero";
+// import Hero from "../components/Hero";
 import TopSeller from "../components/TopSeller";
 import Trendings from "../components/Trendings";
 import Auction from '../components/Auction';
