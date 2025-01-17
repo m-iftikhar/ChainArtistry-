@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import logotext from '../assets/logotext.png';
 import Connect from '../components/Connect';
@@ -87,9 +87,9 @@ const Navbar = () => {
         >
           Connect Wallet
         </button>
-        <button className="px-4 py-2 font-roboto text-red-600 rounded bg-white border-red-600 border-[1.8px] text-[22px] font-medium">
+       <Link to="/nftpage"> <button className="px-4 py-2 font-roboto text-red-600 rounded bg-white border-red-600 border-[1.8px] text-[22px] font-medium">
           Create NFT
-        </button>
+        </button> </Link>
       </div>
 
       {/* Mobile Navigation Menu */}

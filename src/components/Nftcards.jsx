@@ -49,7 +49,7 @@ const cardsData = [
 
 function PromptExamples() {
   return (
-    <div className="py-16 px-4 md:px-6">
+    <div className="py-16 px-4 md:px-6 bg-pink-100">
       <h2 className="text-4xl font-apex font-semibold text-start ml-4 mb-12 md:ml-24 lg:ml-36">
         PROMPT EXAMPLES
       </h2>

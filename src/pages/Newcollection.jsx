@@ -40,7 +40,7 @@ const Newcollection = () => {
         className="rounded-lg shadow-md bg-white p-4 sm:p-6 md:p-8 w-full lg:max-w-[944px]"
       >
         <h1 className="text-2xl sm:text-3xl font-bold font-apex text-center mb-4">
-          MINT YOUR NFT
+          CREATE A COLLECTION
         </h1>
 
         {/* Form Fields */}

@@ -17,9 +17,9 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen font-apex bg-gray-50">
+      <div className="min-h-screen font-apex bg-gradient-to-b from-white to-pink-100">
         {/* Hero Section */}
-        <div className="text-center mt-8 px-4">
+        <div className="text-center  px-4">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl  font-apex font-bold text-gray-800">
             CREATE YOUR OWN <span className="text-red-600">MASTERPIECE</span>
           </h1>
