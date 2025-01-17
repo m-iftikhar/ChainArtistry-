@@ -106,7 +106,7 @@ const Navbar = () => {
             }
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Home
+            HOME
           </NavLink>
           <NavLink
             to="/nftpage"
