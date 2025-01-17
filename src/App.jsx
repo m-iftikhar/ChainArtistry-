@@ -6,6 +6,8 @@ import Nftpage from "./pages/Nftpage";
 import Nftmintpage from './pages/Nftmintpage'
 import Mintdata from "./pages/Mintdata";
 import Topcollect from "./pages/Topcollect";
+import ViewSeller from "./pages/ViewSeller";
+import Auctionpage from "./pages/Auctionpage";
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
         <Route path="/nftpagemint" element={<Nftmintpage />} />
         <Route path="/mintdata" element={<Mintdata />} />
         <Route path="/topcollections" element={<Topcollect />} />
+        <Route path="/viewseller" element={<ViewSeller />} />
+        <Route path="/exploreauctions" element={<Auctionpage />} />
       </Routes>
     </Router>
   );
