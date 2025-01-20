@@ -12,6 +12,8 @@ import Auctionpage from "./pages/Auctionpage";
 import Chooseexisted from "./pages/Chooseexisted";
 import Newcollection from "./pages/Newcollection";
 import Profile from "./pages/Profile";
+import Setting from "./pages/Setting";
+import Sellmethod from "./pages/Sellmethod";
 
 const App = () => {
   return (
@@ -28,6 +30,8 @@ const App = () => {
         <Route path="/choosecollection" element={<Chooseexisted/>} />
         <Route path="/newcollection" element={<Newcollection/>} />
         <Route path="/profile" element={<Profile/>} />
+        <Route path="/setting" element={<Setting/>} />
+        <Route path="/sellmethod" element={<Sellmethod/>} />
       </Routes>
     </Router>
   );
