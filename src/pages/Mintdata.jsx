@@ -119,11 +119,11 @@ const Mintdata = () => {
         </div>
 
         
-        <button
+      <Link to="/profile">  <button
           className="w-full font-roboto sm:w-[139px] h-[53px] rounded-lg bg-gradient-to-r from-[#d65d5d] to-[rgba(253,0,0,1)] text-white text-lg font-medium mt-6"
         >
           Mint
-        </button>
+        </button> </Link>
       </div>
 
       
