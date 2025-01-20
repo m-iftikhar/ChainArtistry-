@@ -1,31 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Apex+Mk2:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap');
-
-
-@font-face {
-  font-family: 'Apex Mk2';
-  src: url('/fonts/ApexMk2.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/Roboto.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Oxanium';
-  src: url('/fonts/Oxanium.woff2') format('woff2');
-}
-
-
-
-
+/* @import url('https://fonts.googleapis.com/css2?family=Apex+Mk2:wght@400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap'); */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-
-  

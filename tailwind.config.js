@@ -9,7 +9,7 @@ export default {
       fontFamily: {
         apex: ['Apex Mk2', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
-        oxanium: ['Oxanium', 'cursive']
+        oxanium: ['Oxanium', 'cursive'],
       },
     },
   },
