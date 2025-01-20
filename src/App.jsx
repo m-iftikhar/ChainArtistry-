@@ -8,7 +8,7 @@ import Mintdata from "./pages/Mintdata";
 import Topcollect from "./pages/Topcollect";
 import ViewSeller from "./pages/ViewSeller";
 import Auctionpage from "./pages/Auctionpage";
-
+import Boost from "./pages/Boost";
 import Chooseexisted from "./pages/Chooseexisted";
 import Newcollection from "./pages/Newcollection";
 import Profile from "./pages/Profile";
@@ -32,6 +32,7 @@ const App = () => {
         <Route path="/profile" element={<Profile/>} />
         <Route path="/setting" element={<Setting/>} />
         <Route path="/sellmethod" element={<Sellmethod/>} />
+        <Route path="/boostpage" element={<Boost/>} />
       </Routes>
     </Router>
   );
