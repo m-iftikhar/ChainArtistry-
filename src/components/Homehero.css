@@ -1,4 +1,3 @@
-
 @keyframes leftRight {
   0%, 100% {
     transform: translateX(0);
@@ -38,4 +37,13 @@
   animation: upDown 2s infinite;
 }
 
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .hero-images-container {
+    display: none; /* Hide images and animations */
+  }
 
+  .hands-background {
+    display: none; /* Hide background image */
+  }
+}

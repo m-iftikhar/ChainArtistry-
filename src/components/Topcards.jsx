@@ -1,5 +1,6 @@
 import proflie from '../assets/proflie.png';
 import nextcollection1 from '../assets/nextcollection1.png';
+import { Link } from 'react-router-dom';
 
 const Topcards = () => {
   const categories = ["Popular", "Trending", "Sports", "Art", "Fantasy", "Photography", "Space"];
@@ -92,17 +93,17 @@ const Topcards = () => {
           >
             
             <div className="flex items-center p-6 space-x-6">
-              <img
+            <Link to="/explore">  <img
                 src={proflie}
                 alt="Icon"
                 className="w-12 h-12 rounded-full"
-              />
+              /> 
               <div>
                 <h3 className="text-lg font-semibold font-apex">{card.title}</h3>
                 <p className="text-sm  text-gray-500 font-roboto">
                   Created by {card.creator}
                 </p>
-              </div>
+              </div> </Link>
             </div>
 
             

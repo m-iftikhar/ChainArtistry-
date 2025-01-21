@@ -14,6 +14,8 @@ import Newcollection from "./pages/Newcollection";
 import Profile from "./pages/Profile";
 import Setting from "./pages/Setting";
 import Sellmethod from "./pages/Sellmethod";
+import Jacobjones from "./pages/Jacobjones";
+import Explore from "./pages/Explore";
 
 const App = () => {
   return (
@@ -33,6 +35,8 @@ const App = () => {
         <Route path="/setting" element={<Setting/>} />
         <Route path="/sellmethod" element={<Sellmethod/>} />
         <Route path="/boostpage" element={<Boost/>} />
+        <Route path="/jacobjones" element={<Jacobjones/>} />
+        <Route path="/explore" element={<Explore/>} />
       </Routes>
     </Router>
   );

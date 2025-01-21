@@ -1,5 +1,6 @@
 import { FaEthereum } from "react-icons/fa";
 import images1 from "../assets/images1.png";
+import { Link } from "react-router-dom";
 
 const Sellercategories = () => {
   const sellers = [
@@ -49,11 +50,11 @@ const Sellercategories = () => {
                 {/* ID and Name */}
                 <div className="flex items-center w-1/3 sm:w-2/12 mb-2 sm:mb-0">
                   <span className="font-medium pr-2">{sellers[0].id}</span>
-                  <img
+             <Link to="/jacobjones">   <img
                     src={sellers[0].avatar}
                     alt={sellers[0].name}
                     className="w-8 h-8 rounded-full mr-2"
-                  />
+                  /> </Link>
                   <span className="font-semibold">{sellers[0].name}</span>
                 </div>
 

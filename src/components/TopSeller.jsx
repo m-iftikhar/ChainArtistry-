@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import topseller from "../assets/topseller.png";
-// import { Link } from "react-router-dom";
+
 
 const sellers = [
   {
@@ -72,11 +72,11 @@ const TopSeller = () => {
             className="flex items-center p-4 shadow-md rounded-lg bg-white w-full max-w-[270px] mx-auto"
           >
             {/* Icon */}
-            <img
+           <img
               src={seller.icon}
               alt={seller.name}
               className="w-[90px] h-[90px] sm:w-[100px] sm:h-[100px] md:w-[116px] md:h-[116px] rounded-md"
-            />
+            /> 
             {/* Text Section */}
             <div className="ml-4">
               <h3 className="text-base md:text-lg  font-semibold">
