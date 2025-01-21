@@ -27,7 +27,7 @@ const Trendings = ({ title }) => {
         {/* Heading */}
         <h1
           style={{ marginLeft: "16px" }}
-          className="text-4xl font-apex font-bold text-gray-800 mb-8"
+          className="text-[64px] font-apex font-normmal text-gray-800 mb-8"
         >
           {title}
         </h1>
@@ -51,10 +51,10 @@ const Trendings = ({ title }) => {
                 </div>
                 {/* Text */}
                 <div>
-                  <h2 className="text-lg font-semibold font-roboto text-gray-800">
+                  <h2 className="text-[18px] font-light font-apex text-gray-800">
                     {nft.title}
                   </h2>
-                  <p className="text-sm text-gray-500">{nft.username}</p>
+                  <p className="text-[11px] font-roboto text-gray-500">{nft.username}</p>
                 </div>
               </div>
 
@@ -63,14 +63,14 @@ const Trendings = ({ title }) => {
                 <img
                   src={nft.image}
                   alt={nft.title}
-                  className="rounded-md object-cover w-full h-[200px] sm:h-[250px] lg:h-[314px]"
+                  className="rounded-md object-cover w-full md:w-[292px] h-[200px] sm:h-[250px] lg:h-[314px]"
                 />
                 {/* Buttons on the Image */}
                 <div className="absolute inset-0 flex items-end justify-between p-4 bg-gradient-to-t from-black/50 to-transparent">
-                  <button className="bg-red-500 text-white text-sm px-4 py-2 rounded-full hover:bg-red-600 transition">
+                  <button className="bg-red-500  w-[56px] h-[36px] text-[12px] text-white  px-4 py-2 rounded-md hover:bg-red-600 transition">
                     Buy
                   </button>
-                  <p className="text-sm text-white font-medium bg-black/50 px-3 py-1 rounded-full">
+                  <p className="bg-white bg-opacity-75 text-center text-gray-800 w-[123px] h-[36px] text-[12px] font-semibold px-3 py-2 rounded-lg">
                     ${nft.price}
                   </p>
                 </div>

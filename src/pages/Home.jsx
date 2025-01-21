@@ -17,7 +17,7 @@ const Home = () => {
       <Herotitle/>
       <Hero />
       <Featurecollection/>
-      <Trendings title="Trending NFTs"/>
+      <Trendings title="Trending NFT's"/>
       <TopSeller/>
       <Auction title="Auctions"/>
       <TopCollections/>

@@ -58,10 +58,10 @@ const TopSeller = () => {
     <div className="container max-w-6xl mx-auto px-4 py-8">
       {/* Header Section */}
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl md:text-4xl font-apex font-bold">TOP SELLER</h2>
+        <h2 className="text-2xl md:text-[64px] font-apex font-normal">TOP SELLER</h2>
         {/* <Link to='/viewallseller'> */}
         <Link to="/viewseller">
-        <h3 className="text-red-500 font-medium font-apex cursor-pointer">View All</h3> </Link>
+        <h3 className="text-red-500 text-[22px] font-roboto font-bold  cursor-pointer">View All</h3> </Link>
         {/* </Link> */}
       </div>
       {/* Sellers Grid */}
@@ -69,20 +69,20 @@ const TopSeller = () => {
         {sellers.map((seller) => (
           <div
             key={seller.id}
-            className="flex items-center p-4 shadow-md rounded-lg bg-white w-full max-w-[270px] mx-auto"
+            className="flex items-center p-2  md:w-[259px] md:h-[121px]   shadow-md rounded-md bg-transparent w-full max-w-[270px] mx-auto"
           >
             {/* Icon */}
            <img
               src={seller.icon}
               alt={seller.name}
-              className="w-[90px] h-[90px] sm:w-[100px] sm:h-[100px] md:w-[116px] md:h-[116px] rounded-md"
+              className="w-[90px] h-[90px] sm:w-[100px] sm:h-[100px] md:w-[121px] md:h-[121px] py-1  rounded-md"
             /> 
             {/* Text Section */}
             <div className="ml-4">
-              <h3 className="text-base md:text-lg  font-semibold">
+              <h3 className="text-base md:text-[22px] font-roboto  font-bold">
                 {seller.name}
               </h3>
-              <p className="text-sm font-roboto text-gray-500">{seller.price}</p>
+              <p className="text-[14px] font-roboto font-bold text-gray-500">{seller.price}</p>
             </div>
           </div>
         ))}

@@ -29,11 +29,11 @@ const CollectionCard = ({ title, creator, creatorImage, images }) => (
         <img
           src={creatorImage}
           alt={creator}
-          className="w-10 h-10 rounded-full border-2 border-blue-500"
+          className="w-[68px] h-[68px] rounded-md border-2 "
         />
         <div>
-          <p className="font-bold text-lg">{title}</p>
-          <p className="text-gray-500 text-sm">Created by {creator}</p>
+          <p className="font-bold text-[18px] font-roboto">{title}</p>
+          <p className="text-gray-500 text-sm font-roboto">Created by {creator}</p>
         </div>
       </div>
     </div>

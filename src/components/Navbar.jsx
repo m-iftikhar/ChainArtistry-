@@ -1,21 +1,28 @@
 import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import logotext from '../assets/logotext.png';
 import Connect from '../components/Connect';
+import logoother1 from '../assets/logoother1.png';
+import logoother2 from '../assets/logoother2.png';
+
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const location = useLocation(); // Get the current route
 
   const toggleModal = () => {
-    setIsModalOpen(prev => !prev); // Toggle the modal state
+    setIsModalOpen((prev) => !prev); // Toggle the modal state
   };
+
+  // Check if the current route is "/mintdata" or "/nftmint"
+  const isMintPage = location.pathname === '/mintdata' || location.pathname === '/nftpagemint' || location.pathname === '/choosecollection' || location.pathname === '/newcollection' || location.pathname === '/profile' || location.pathname === '/setting' || location.pathname === '/sellmethod' || location.pathname === '/nftpage';
 
   return (
     <div className="w-full h-[100px] flex items-center justify-between px-4 bg-white shadow-lg">
       {/* Logo */}
-      <div className="flex flex-col items-center h-[100px] w-auto">
+      <div className="flex flex-col items-center h-[100px] w-[99px] mt-[10px]  ">
         <img src={logo} alt="Logo" className="h-[60px] w-auto" />
         <img src={logotext} alt="logotext" className="h-[20px] w-auto" />
       </div>
@@ -79,17 +86,42 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Buttons */}
-      <div className="hidden md:flex space-x-4 font-roboto">
-        <button
-          className="px-4 py-2 rounded-[8px] bg-gradient-to-r from-[#d65d5d] to-[rgba(253,0,0,1)] text-white text-[22px] font-medium"
-          onClick={toggleModal} // Toggle modal on button click
-        >
-          Connect Wallet
-        </button>
-       <Link to="/nftpage"> <button className="px-4 py-2 font-roboto text-red-600 rounded bg-white border-red-600 border-[1.8px] text-[22px] font-medium">
-          Create NFT
-        </button> </Link>
+      {/* Conditional Rendering for Logos or Buttons */}
+      <div className="hidden md:flex space-x-4 font-roboto ">
+        {isMintPage ? (
+          <>
+          <div className='bg-gray-300 w-[76px] h-[58px] rounded-lg gap-[10px] px-[26px] py-[14px] '>
+            <img
+              src={logoother2}
+              alt="logoother1"
+              className="w-[26px] h-[26px] object-contain "
+            />
+            </div>
+            <div className='bg-gray-300 w-[76px] h-[58px] rounded-lg px-[26px] py-[14px] '>
+            <img
+          
+              src={logoother1}
+              alt="logoother2"
+              className=" w-[26px] h-[26px] object-contain"
+            />
+              </div>
+          </>
+        ) : (
+          <>
+            <button
+              className="bg-red-600 text-white px-4 py-2 font-roboto text-[22px]  w-[213px] h-[58px] rounded-md shadow-md hover:bg-red-40000"
+              onClick={toggleModal}
+            >
+              Connect Wallet
+            </button>
+            <Link
+              to="/mintdata"
+              className="bg-white  text-red-600 border border-red-600 text-center   w-[176px] h-[58px] px-4 py-2 rounded-md shadow-md font-roboto text-[22px]"
+            >
+              Create NFT
+            </Link>
+          </>
+        )}
       </div>
 
       {/* Mobile Navigation Menu */}
@@ -121,20 +153,40 @@ const Navbar = () => {
           >
             AI NFT GENERATION
           </NavLink>
-          <button
-            className="px-4 py-2 rounded bg-gradient-to-r from-[#d65d5d] to-[rgba(253,0,0,1)] text-white text-[16px] font-medium"
-            onClick={toggleModal} // Toggle modal on button click
-          >
-            Connect Wallet
-          </button>
-          <button className="px-4 py-2 text-red-600 rounded bg-white border-red-600 border-[1.8px] text-[16px] font-medium">
-            Create NFT
-          </button>
+          {isMintPage ? (
+            <>
+              <img
+                src={logoother1}
+                alt="logoother1"
+                className=" w-[26px] h-[26px] object-contain"
+              />
+              <img
+                src={logoother2}
+                alt="logoother2"
+                className=" w-[26px] h-[26px] object-contain"
+              />
+            </>
+          ) : (
+            <>
+              <button
+                className="bg-red-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-red-400"
+                onClick={toggleModal}
+              >
+                Connect Wallet
+              </button>
+              <Link
+                to="/mintdata"
+                className=" text-red-600 px-4 py-2 rounded-md shadow-md text-center border border-red-600"
+              >
+                Create NFT
+              </Link>
+            </>
+          )}
         </div>
       )}
 
       {/* Connect Wallet Modal */}
-      {isModalOpen && <Connect toggleModal={toggleModal} />} {/* Pass the toggle function */}
+      {isModalOpen && <Connect toggleModal={toggleModal} />}
     </div>
   );
 };

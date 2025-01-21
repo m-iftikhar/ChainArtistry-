@@ -33,12 +33,12 @@ const Featurecollection = () => {
   };
 
   return (
-    <div className="py-10 px-5 w-full mt-[150px]">
+    <div className="py-10 px-5 w-full ">
       <div className="relative max-w-6xl mx-auto">
         {/* Title and Subtext */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-5">
           <div>
-            <h2 className="text-4xl font-apex font-bold ml-4 md:ml-0">Featured Collection</h2>
+            <h2 className="text-[64px] font-apex font-normal ml-4 md:ml-0">Featured Collection</h2>
             <p className="text-gray-500 font-roboto ml-4 md:ml-0">
               Explore our exclusive featured collection, showcasing innovative.
             </p>
@@ -74,7 +74,7 @@ const Featurecollection = () => {
                   {card.name.charAt(0)} {/* Placeholder for an icon */}
                 </div>
                 <div>
-                  <p className="text-gray-800 font-semibold font-apex text-[18px]">{card.name}</p>
+                  <p className="text-gray-800 font-light font-apex text-[18px]">{card.name}</p>
                   <p className="text-gray-500 font-roboto text-[11px]">{card.description}</p>
                 </div>
               </div>
@@ -84,15 +84,15 @@ const Featurecollection = () => {
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="rounded-lg object-cover w-full h-[314px]"
+                  className="rounded-md object-cover w-full md:w-[292px] h-[314px]"
                   style={{ objectFit: 'cover' }}
                 />
                 {/* Buttons on the bottom of the image */}
                 <div className="absolute inset-x-0 bottom-0 flex justify-between p-2">
-                  <button className="bg-red-500 text-white px-4 py-2 text-[12px] rounded-lg hover:bg-red-600">
+                  <button className="bg-red-500 w-[56px] h-[36px] text-white font-roboto  px-4 py-2 text-[12px] rounded-lg hover:bg-red-600">
                     Buy
                   </button>
-                  <p className="bg-white bg-opacity-75 text-gray-800 font-bold px-3 py-2 rounded-lg">
+                  <p className="bg-white bg-opacity-75 text-center text-gray-800 w-[123px] h-[36px] text-[12px] font-semibold px-3 py-2 rounded-lg">
                     Price: {card.price}
                   </p>
                 </div>
