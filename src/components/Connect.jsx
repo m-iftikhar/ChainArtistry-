@@ -4,9 +4,10 @@ import connectlogo2 from '../assets/connectlogo2.png';
 import connectlog3 from '../assets/connectlogo3.png';
 import connectlogo4 from '../assets/connectlogo4.png';
 import PropTypes from 'prop-types';
+
 const Connect = ({ toggleModal }) => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 ">
       <div className="bg-white rounded-lg shadow-lg p-6 w-80 relative">
         {/* Close Button */}
         <button
@@ -26,8 +27,8 @@ const Connect = ({ toggleModal }) => {
         </div>
 
         {/* Wallet Options */}
-        <div className="mt-6 space-y-3">
-          <div className="relative">
+        <div className="mt-6 space-y-3 ">
+          <div className="relative ">
             <img
               src={connectlogo1}
               alt="Pera Logo"
@@ -37,7 +38,7 @@ const Connect = ({ toggleModal }) => {
               type="text"
               value="Pera "
               readOnly
-              className="w-full border-2 border-red-500 rounded-lg py-2 pl-10 pr-4 focus:outline-none text-gray-700"
+              className="w-full border-2 border-red-500 rounded-lg cursor-pointer py-2 pl-10 pr-4 focus:outline-none text-gray-700"
             />
           </div>
 
@@ -47,11 +48,12 @@ const Connect = ({ toggleModal }) => {
               alt="Defly Logo"
               className="absolute left-2 top-1/2 transform -translate-y-1/2 h-6"
             />
+            
             <input
               type="text"
               value="Defly"
               readOnly
-              className="w-full border-2 border-red-500 rounded-lg py-2 pl-10 pr-4 focus:outline-none text-gray-700"
+              className="w-full border-2 border-red-500 rounded-lg cursor-pointer py-2 pl-10 pr-4 focus:outline-none text-gray-700"
             />
           </div>
 
@@ -65,7 +67,7 @@ const Connect = ({ toggleModal }) => {
               type="text"
               value="Daffi"
               readOnly
-              className="w-full border-2 border-red-500 rounded-lg py-2 pl-10 pr-4 focus:outline-none text-gray-700"
+              className="w-full border-2 border-red-500 rounded-lg cursor-pointer py-2 pl-10 pr-4 focus:outline-none text-gray-700"
             />
           </div>
 
@@ -79,7 +81,7 @@ const Connect = ({ toggleModal }) => {
               type="text"
               value="WalletConnect"
               readOnly
-              className="w-full border-2 border-red-500 rounded-lg py-2 pl-10 pr-4 focus:outline-none text-gray-700"
+              className="w-full border-2 border-red-500 rounded-lg cursor-pointer py-2 pl-10 pr-4 focus:outline-none text-gray-700"
             />
           </div>
         </div>
