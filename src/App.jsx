@@ -16,10 +16,12 @@ import Setting from "./pages/Setting";
 import Sellmethod from "./pages/Sellmethod";
 import Jacobjones from "./pages/Jacobjones";
 import Explore from "./pages/Explore";
+import Scrollogic from "./components/Scrollogoc";
 
 const App = () => {
   return (
     <Router>
+      <Scrollogic/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
