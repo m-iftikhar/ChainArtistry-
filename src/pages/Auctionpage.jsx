@@ -6,7 +6,7 @@ const Auctionpage = () => {
   return (
     <div>
         <Auctionhero/>
-      <Auctionpagecards title="Top listed Auctions"/>
+      <Auctionpagecards title="Top listed "/>
       <Auctionpagecards title="Live Auctions"/>
         <Footer/>
     </div>

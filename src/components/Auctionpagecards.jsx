@@ -27,7 +27,7 @@ const Auctionpagecards = ({title}) => {
         {/* Heading */}
         <h1
           style={{ marginLeft: '16px' }}
-          className="text-3xl md:text-4xl font-bold font-apex text-gray-800 mb-8"
+          className="text-3xl md:text-[64px] font-bold font-apex text-gray-800 mb-8"
         >
           {title}
         </h1>
@@ -37,15 +37,15 @@ const Auctionpagecards = ({title}) => {
           {nfts.map((nft) => (
             <div
               key={nft.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300 w-full max-w-xs mx-auto border border-gray-200"
+              className="bg-white  rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300 w-full max-w-xs mx-auto border border-gray-200"
             >
               {/* Top Section with Icon and Name */}
               <div className="flex items-center gap-4 p-4">
-                <div className="bg-gray-200 p-2 rounded-full">
+                <div className=" p-2 rounded-full">
                   <img
                     src={proflie}
                     alt={nft.username}
-                    className="w-10 h-10 rounded-full"
+                    className="w-[53px] h-[53px] rounded-full"
                   />
                 </div>
                 <div>
@@ -57,11 +57,11 @@ const Auctionpagecards = ({title}) => {
               </div>
 
               {/* Image Section */}
-              <div className="relative group">
+              <div className="relative group rounded-lg">
                 <img
                   src={nft.image}
                   alt={nft.title}
-                  className="w-full h-[250px] md:h-[314px] rounded-md object-cover"
+                  className="w-full h-[250px] md:h-[314px] p-2 rounded-xl object-cover"
                 />
                 {/* Time Display */}
                 <div
