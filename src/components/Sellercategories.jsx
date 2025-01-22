@@ -17,28 +17,39 @@ const Sellercategories = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center p-4 bg-gray-50">
       <div className="w-full max-w-6xl">
         {/* Dropdown for category */}
-        <div className="flex flex-wrap justify-between items-center mb-6 gap-4">
-          <select className="p-2 border rounded-md w-40">
+        <div className="flex flex-wrap justify-between ] items-center mb-6 gap-4">
+          <select className="p-2 font-semibold font-roboto text-[14px] border rounded-md md:w-[133px] h-[48px] w-40">
             <option>Category</option>
           </select>
-          <span className="text-sm sm:text-base md:text-lg">Last 30 days</span>
+          <span className="md:text-[14px] font-roboto font-semibold sm:text-base ">Last 30 days</span>
         </div>
 
         {/* Table */}
         <div className="overflow-x-auto bg-transparent">
           <div className="space-y-4">
             {/* Heading row */}
-            <div className="w-full bg-gray-200 shadow-md rounded-lg p-4 flex items-center justify-between text-xs sm:text-sm md:text-base">
-              <div className="w-1/12 text-center">ID</div>
-              <div className="w-3/12 sm:w-2/12 text-center">Name</div>
-              <div className="w-2/12 text-center">Volume</div>
-              <div className="hidden sm:block w-2/12 text-center">Followers</div>
-              <div className="hidden md:block w-2/12 text-center">Percent</div>
-              <div className="hidden lg:block w-2/12 text-center">Floor Price</div>
-              <div className="w-2/12 text-center">Items</div>
+            <div className="w-full bg-gray-200 shadow-md  rounded-lg p-4 flex flex-wrap justify-between items-center text-xs sm:text-sm md:text-base">
+              <div className="w-full md:w-[280px] mb-2 md:mb-0 text-[16px] sm:text-[18px] md:text-[22px] font-roboto font-semibold">
+                Collections
+              </div>
+              <div className="w-1/3 sm:w-[156px] text-center text-[16px] sm:text-[18px] md:text-[22px] font-semibold">
+                Volume
+              </div>
+              <div className="w-1/3 sm:w-[156px] text-center text-[16px] sm:text-[18px] md:text-[22px] font-semibold">
+                Followers
+              </div>
+              <div className="hidden sm:block w-1/3 text-center sm:w-[156px] text-[16px] sm:text-[18px] md:text-[22px] font-semibold">
+                24%
+              </div>
+              <div className="hidden lg:block w-1/3 text-center lg:w-[150px] text-[16px] sm:text-[18px] md:text-[22px] font-semibold">
+                Floor Price
+              </div>
+              <div className="w-1/3 sm:w-[94px] text-center text-[16px] sm:text-[18px] md:text-[22px] font-semibold">
+                Items
+              </div>
             </div>
 
             {/* Data rows */}
@@ -48,37 +59,41 @@ const Sellercategories = () => {
                 className="w-full bg-white shadow-md rounded-lg p-4 flex flex-wrap sm:flex-nowrap items-center justify-between text-xs sm:text-sm md:text-base"
               >
                 {/* ID and Name */}
-                <div className="flex items-center w-1/3 sm:w-2/12 mb-2 sm:mb-0">
+                <div className="flex items-center w-full sm:w-[280px] mb-2 sm:mb-0">
                   <span className="font-medium pr-2">{sellers[0].id}</span>
-             <Link to="/jacobjones">   <img
-                    src={sellers[0].avatar}
-                    alt={sellers[0].name}
-                    className="w-8 h-8 rounded-full mr-2"
-                  /> </Link>
-                  <span className="font-semibold">{sellers[0].name}</span>
+                  <Link to="/jacobjones">
+                    <img
+                      src={sellers[0].avatar}
+                      alt={sellers[0].name}
+                      className="w-[50px] h-[50px] sm:w-[74px] sm:h-[74px] rounded-xl mr-2"
+                    />
+                  </Link>
+                  <span className="font-bold pl-2 text-sm sm:text-base md:text-[22px]">
+                    {sellers[0].name}
+                  </span>
                 </div>
 
                 {/* Volume */}
-                <div className="text-center w-1/3 sm:w-2/12">{sellers[0].volume}</div>
+                <div className="text-center w-1/3 sm:w-[72px]">{sellers[0].volume}</div>
 
                 {/* Followers */}
-                <div className="hidden sm:block text-center w-2/12">
+                <div className="hidden sm:block text-center w-1/3 sm:w-[72px]">
                   {sellers[0].followers}
                 </div>
 
                 {/* Percent */}
-                <div className="hidden md:block text-center w-2/12 text-green-500">
+                <div className="hidden md:block text-center w-1/3 md:w-[72px] text-green-500">
                   {sellers[0].percent}
                 </div>
 
                 {/* Floor Price */}
-                <div className="hidden lg:flex items-center justify-center w-2/12 space-x-1">
+                <div className="hidden lg:flex items-center justify-center w-1/3 lg:w-[150px] space-x-1">
                   <FaEthereum className="text-gray-500" />
                   <span>{sellers[0].floorPrice}</span>
                 </div>
 
                 {/* Items */}
-                <div className="text-center w-1/3 sm:w-2/12">{sellers[0].items}</div>
+                <div className="text-center w-1/3 sm:w-[72px]">{sellers[0].items}</div>
               </div>
             ))}
           </div>
