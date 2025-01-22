@@ -49,26 +49,26 @@ const cardsData = [
 
 function PromptExamples() {
   return (
-    <div className="py-16 px-4 md:px-6 bg-pink-100">
-      <h2 className="text-4xl font-apex font-semibold text-start ml-4 mb-12 md:ml-24 lg:ml-36">
+    <div className="py-12 px-4 md:px-6  bg-pink-100">
+      <h2 className="text-[32px] md:text-[48px] lg:text-[64px] font-apex font-normal text-start ml-4 mb-12 md:w-[598px]">
         PROMPT EXAMPLES
       </h2>
-      <div className="grid grid-cols-1 gap-6 mx-auto md:grid-cols-2 lg:grid-cols-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mx-auto md:grid-cols-2 lg:grid-cols-2">
         {cardsData.map((card, index) => (
           <div
             key={index}
-            className="relative flex bg-white shadow-md rounded-lg overflow-hidden border hover:shadow-lg transition-shadow mx-auto w-full max-w-[577px] h-[200px] md:w-[550px] lg:w-[577px]"
+            className="relative flex bg-white shadow-md p-4 rounded-lg overflow-hidden border hover:shadow-lg transition-shadow mx-auto w-full max-w-[577px] h-auto md:h-[262px] lg:h-[262px]"
           >
             {/* Image Section */}
-            <div className="relative w-1/3">
+            <div className="relative w-[100%] md:w-[310px] h-[180px] md:h-[232px]">
               <img
                 src={card.image}
                 alt={card.title}
-                className="object-cover h-full w-full rounded-md"
+                className="object-cover h-full w-full rounded-lg"
               />
-              {/* Copy Icon positioned on the right border of the image */}
+              {/* Copy Icon */}
               <button
-                className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:shadow-lg"
+                className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:shadow-lg"
                 aria-label="Copy"
               >
                 <FaRegCopy className="text-red-600 text-xl" />
@@ -76,9 +76,9 @@ function PromptExamples() {
             </div>
 
             {/* Text Section */}
-            <div className="p-4 w-2/3">
-              <h3 className="text-lg font-apex text-gray-800">{card.title}</h3>
-              <p className="text-sm font-roboto text-gray-600 mt-2">
+            <div className="p-4 w-full md:w-2/3">
+              <h3 className="text-md md:text-lg font-apex text-[18px] md:text-[22px]">{card.title}</h3>
+              <p className="text-sm md:text-base font-roboto text-[14px] text-gray-500 mt-2">
                 {card.description}
               </p>
             </div>

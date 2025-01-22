@@ -98,18 +98,21 @@ const Navbar = () => {
             />
             </div>
             <div className='bg-gray-300 w-[76px] h-[58px] rounded-lg px-[26px] py-[14px] '>
-            <img
+          <Link to="/profile">  <img
           
               src={logoother1}
               alt="logoother2"
               className=" w-[26px] h-[26px] object-contain"
-            />
+            /></Link>
               </div>
           </>
         ) : (
           <>
             <button
-              className="bg-red-600 text-white px-4 py-2 font-roboto text-[22px]  w-[213px] h-[58px] rounded-md shadow-md hover:bg-red-40000"
+            // style={{
+            //   background: "linear-gradient(318deg, #fd0000 26.88%, #ff9292 105.85%)",
+            // }}
+              className="bg-button-gradient text-white px-4 py-2 font-roboto text-[22px]  w-[213px] h-[58px] rounded-md shadow-md hover:bg-red-40000"
               onClick={toggleModal}
             >
               Connect Wallet
@@ -169,7 +172,7 @@ const Navbar = () => {
           ) : (
             <>
               <button
-                className="bg-red-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-red-400"
+                className="bg-button-gradient text-white px-4 py-2 rounded-md shadow-md hover:bg-red-400"
                 onClick={toggleModal}
               >
                 Connect Wallet

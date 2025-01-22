@@ -11,6 +11,9 @@ export default {
         roboto: ['Roboto', 'sans-serif'],
         oxanium: ['Oxanium', 'cursive'],
       },
+      backgroundImage: {
+        'button-gradient': 'linear-gradient(318deg, #fd0000 26.88%, #ff9292 105.85%)',
+      },
     },
   },
   plugins: [],

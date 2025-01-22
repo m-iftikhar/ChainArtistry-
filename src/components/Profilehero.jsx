@@ -1,8 +1,8 @@
 import heroprofile from '../assets/heroprofile.png';
-import logo5 from '../assets/logo5.png';
-import logo3 from '../assets/logo3.png';
-import logo4 from '../assets/logo4.png';
-import sparrowlogo from '../assets/sparrowlogo.png';
+import main1 from '../assets/main1.png';
+import main2 from '../assets/main2.png';
+import main3 from '../assets/main3.png';
+import main4 from '../assets/main4.png';
 
 const Profilehero = () => {
   return (
@@ -38,26 +38,10 @@ const Profilehero = () => {
 
         {/* Logos Section */}
         <div className="flex flex-wrap gap-4 justify-center lg:justify-start mt-4">
-          <img
-            src={sparrowlogo}
-            alt="Sparrow Logo"
-            className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-lg"
-          />
-          <img
-            src={logo5}
-            alt="Logo 5"
-            className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-lg"
-          />
-          <img
-            src={logo3}
-            alt="Logo 3"
-            className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-lg"
-          />
-          <img
-            src={logo4}
-            alt="Logo 4"
-            className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-lg"
-          />
+        <img src={main1} alt="Link 1" className="w-[45px] h-[42px] object-cover rounded-md" />
+                  <img src={main2} alt="Link 2" className="w-[116px] h-[42px] object-cover rounded-md" />
+                  <img src={main3} alt="Link 3" className="w-[116px] h-[42px] object-cover rounded-md" />
+                  <img src={main4} alt="Link 4" className="w-[45px] h-[42px] object-cover rounded-md" />
         </div>
 
         {/* Description */}

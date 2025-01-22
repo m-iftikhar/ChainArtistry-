@@ -74,7 +74,7 @@ const Newcollection = () => {
 
         <Link to="/mintdata">
           <button
-            className="w-full sm:w-[139px] h-[53px] rounded-lg bg-gradient-to-r from-[#d65d5d] to-[rgba(253,0,0,1)] text-white text-lg font-medium mt-6"
+            className="w-full sm:w-[139px] h-[53px] rounded-lg bg-button-gradient text-white text-lg font-medium mt-6"
           >
             Next
           </button>

@@ -17,12 +17,12 @@ const Mintdata = () => {
   return (
     <div className="flex flex-col lg:flex-row justify-center items-start p-4 sm:p-6 md:p-8 gap-6 sm:gap-8 bg-gradient-to-b from-pink-50 to-pink-200 min-h-screen">
        <Link  to="/nftpagemint">   <button
-          className="absolute top-28 left-3 bg-red-500 text-white text-sm font-medium px-4 py-2 rounded-lg shadow"
+          className="absolute top-28 left-3 bg-white text-[20px] font-normal w-[126px] h-[64px] px-4 py-2 rounded-lg shadow"
         >
           Back
         </button> </Link>
       <div
-        className="rounded-lg p-3 mt-6 shadow-md bg-white flex justify-center items-center relative"
+        className="rounded-lg p-3 mt-16 shadow-md bg-white flex justify-center items-center relative"
         style={{ width: '296px', height: '309px' }}
       >
         <img
@@ -35,36 +35,36 @@ const Mintdata = () => {
 
       
       <div
-        className="rounded-lg shadow-md bg-white p-4 sm:p-6 md:p-8"
+        className="rounded-lg shadow-md mt-16 lg:h-[1320px] bg-white p-4 sm:p-6 md:p-8"
         style={{ maxWidth: '944px', width: '100%' }}
       >
-        <h1 className="text-3xl sm:text-2xl font-bold font-apex text-center mb-4">MINT YOUR NFT</h1>
+        <h1 className="text-[40px] sm:text-2xl font-normal font-apex text-center mb-4">MINT YOUR NFT</h1>
 
         
         <div className="mb-6">
-          <h3 className="mb-2 font-medium  font-roboto">Item Name*</h3>
+          <h3 className="mb-2 font-medium  font-roboto text-[20px]">Item Name*</h3>
           <input
             type="text"
-            className="w-full h-[58px] font-roboto rounded-lg border-gray-300 border px-4 outline-none"
+            className="w-full h-[58px] lg:w-[817px] font-roboto rounded-lg border-gray-300 border px-4 outline-none"
             placeholder="Name Your NFT"
           />
         </div>
 
         
         <div className="mb-6">
-          <h3 className="text-gray-700 mb-2 font-roboto font-medium">Token Symbol*</h3>
+          <h3 className=" mb-2 font-roboto font-medium text-[20px]">Token Symbol*</h3>
           <input
             type="text"
-            className="w-full h-[58px] font-roboto rounded-lg border-gray-300 border px-4 outline-none"
+            className="w-full h-[58px] lg:w-[817px] font-roboto rounded-lg border-gray-300 border px-4 outline-none"
             placeholder="CGPT, for example"
           />
         </div>
 
         
         <div className="mb-6">
-          <h3 className="mb-2 font-roboto font-medium">Description</h3>
+          <h3 className="mb-2 font-roboto font-medium text-[20px]">Description</h3>
           <textarea
-            className="w-full h-[158px] font-roboto rounded-lg border-gray-300 border p-4 outline-none resize-none"
+            className="w-full h-[158px] lg:w-[817px] font-roboto rounded-lg border-gray-300 border p-4 outline-none resize-none"
             placeholder="Provide a detailed description of the item"
           ></textarea>
         </div>
@@ -72,35 +72,35 @@ const Mintdata = () => {
         
         <div className="mb-6 font-roboto">
           <div className='flex justify-between'>
-          <p className="font-medium mb-2">Choose a collection:</p>
+          <p className="font-medium text-[20px] font-roboto mb-2">Choose a collection:</p>
           <Link to="/choosecollection">
-          <p className="font-medium mb-2 text-gray-500  underline">Choose from existed</p> </Link>
+          <p className="font-medium mb-2 text-gray-500 font-roboto text-[16px] relative right-16 underline">Choose from existed</p> </Link>
           </div>
-          <p className="text-gray-500 mb-4">This is the collection where your item will appear.</p>
+          <p className="text-gray-500 text-[16px] font-roboto font-normal mb-4">This is the collection where your item will appear.</p>
           <div className="flex flex-col sm:flex-row gap-4 font-roboto">
-            <div className="flex items-center px-4 py-2 rounded-lg bg-white border border-gray-300 shadow-md">
+            <div className="flex items-center px-4 py-2 lg:w-[396px] lg:h-[91px] rounded-lg bg-white border border-gray-300 shadow-md">
               <img src={mint1} className="w-[61px] h-[61px] rounded-lg object-cover" alt="Collection" />
-              <span className="text-gray-700 font-medium ml-4">Wonderful Artworks</span>
+              <span className="text-[18px] font-medium ml-4">Wonderful Artworks</span>
             </div>
 
-            <Link to="/newcollection"> <div className="flex items-center px-4 font-roboto py-2 rounded-lg bg-white border border-gray-300 shadow-md">
+            <Link to="/newcollection"> <div className="flex items-center lg:w-[396px] lg:h-[91px]  px-4 font-roboto py-2 rounded-lg bg-white border border-gray-300 shadow-md">
               <FaPlus className="w-[61px] h-[61px] rounded-lg bg-gray-200 p-2" />
-              <span className="text-gray-700 font-medium ml-4">Create New Collection</span>
+              <span className="text-[18px] font-medium ml-4">Create New Collection</span>
             </div></Link>
           </div>
         </div>
 
         
         <div className="mb-6 font-roboto">
-          <p className="mb-2 text-lg font-semibold">Add Traits</p>
-          <p className="mb-4 text-gray-600">
+          <p className="mb-2 font-roboto font-medium text-[20px]">Add Traits</p>
+          <p className="mb-4 font-roboto text-[18px] font-normal text-gray-600">
             Traits describe attributes of your item. They appear as filters inside 
             your collection page and are also listed out inside your item page.
           </p>
           
           <button
             onClick={handleAddTraitsClick}
-            className="flex items-center gap-2 px-4 py-2 border border-gray-400 rounded-xl text-gray-700"
+            className="flex items-center gap-2 lg:w-[195px] lg:h-[58px] text-center justify-center px-4 py-2 border border-gray-400 rounded-xl text-gray-700"
           >
             Add Trait <FaPlus />
           </button>
@@ -108,7 +108,7 @@ const Mintdata = () => {
 
         
         <div className="mb-6 font-roboto">
-          <h3 className="text-gray-700 mb-2 font-medium">Royalties</h3>
+          <h3 className=" font-roboto mb-2 font-medium text-[20px]">Royalties</h3>
           <label htmlFor="royalties" className="flex items-center cursor-pointer">
             <div className="relative">
               <input type="checkbox" id="royalties" className="hidden" />
@@ -120,7 +120,7 @@ const Mintdata = () => {
 
         
       <Link to="/profile">  <button
-          className="w-full font-roboto sm:w-[139px] h-[53px] rounded-lg bg-gradient-to-r from-[#d65d5d] to-[rgba(253,0,0,1)] text-white text-lg font-medium mt-6"
+          className="w-full font-roboto sm:w-[139px] h-[53px] rounded-lg bg-button-gradient text-white text-lg font-medium mt-6"
         >
           Mint
         </button> </Link>
@@ -158,7 +158,7 @@ const Mintdata = () => {
             </div>
             <button
               onClick={handleCloseModal}
-              className="absolute bottom-4 right-4 px-6 py-2 bg-gradient-to-r from-pink-500 to-pink-600 text-white rounded-lg"
+              className="absolute bottom-4 right-4 px-6 py-2 bg-button-gradient text-white rounded-lg"
             >
               Add
             </button>

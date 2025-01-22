@@ -7,10 +7,10 @@ function Profiletop() {
     <div className="flex flex-col items-center w-full px-4">
       {/* Buttons Section */}
       <div
-        className="flex space-x-4 mt-6 border border-gray-400 rounded-md p-2 sm:absolute sm:top-[140px] sm:left-[300px] sm:gap-0"
+        className="flex space-x-4 mt-3 border border-gray-400 rounded-md p-2 sm:absolute sm:top-[140px] sm:left-[300px] sm:gap-0"
       >
         <button
-          className="bg-red-600 text-white font-apex px-4 py-2 rounded-md w-[100px] h-[50px]"
+          className="bg-button-gradient text-white font-apex px-4 py-2 rounded-md w-[100px] h-[50px]"
         >
           Profile
         </button>
@@ -32,7 +32,7 @@ function Profiletop() {
             alt="Profile Banner"
             className="w-full h-full object-cover rounded-lg"
           />
-          <button className="absolute top-4 right-4 bg-red-500 text-white py-2 px-4 rounded-[15px]">
+          <button className="absolute top-4 right-4 bg-button-gradient text-white py-2 px-4 rounded-[15px]">
             Follow
           </button>
         </div>

@@ -32,22 +32,23 @@ const Setting = () => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+    <div className="flex flex-col items-center w-full px-4   sm:px-6 md:px-8 lg:px-12 xl:px-16">
       {/* Buttons Section */}
       <div className="flex space-x-4 mt-6 border border-gray-400 rounded-md p-2 sm:absolute sm:top-[140px] sm:left-[300px] sm:gap-0">
         <Link to="/profile">
-          <button className="bg-red-600 text-white font-apex px-4 py-2 rounded-md w-[100px] h-[50px]">
+          <button className="text-black font-apex px-4 py-2 rounded-md w-[100px] h-[50px]">
             Profile
           </button>
         </Link>
-        <button className="text-black font-apex px-4 py-2 rounded-md w-[100px] h-[50px]">
+        <button className="bg-button-gradient text-white font-apex px-4 py-2 rounded-md w-[100px] h-[50px]">
           Setting
         </button>
       </div>
+      
 
       {/* Main Content */}
       <div
-        className="w-full max-w-screen-xl mx-auto text-white p-8 rounded-lg mt-[200px]"
+        className="w-full max-w-screen-xl mx-auto text-white p-8 rounded-lg mt-[140px]"
         style={{ height: "1794px", opacity: 1 }}
       >
         {/* Banner Upload */}
@@ -119,7 +120,7 @@ const Setting = () => {
                     placeholder={`Enter ${label}`}
                     className="flex-1 w-full sm:w-[817px] h-[58px] border border-gray-300 text-black px-4 py-2 rounded-l-lg"
                   />
-                  <button className="bg-red-500 text-white px-4 py-2 sm:absolute right-28 rounded-md w-[120px] sm:w-[130px] flex-shrink-0">
+                  <button className="bg-button-gradient text-white px-4 py-2 sm:absolute right-28 rounded-md w-[120px] sm:w-[130px] flex-shrink-0">
                     Connect
                   </button>
                 </div>
@@ -131,7 +132,7 @@ const Setting = () => {
         {/* Save Changes */}
         <div className="mt-8 text-left">
           <Link to="/profile">
-            <button className="bg-red-500 text-white px-6 py-3 rounded-lg">
+            <button className="bg-button-gradient text-white px-6 py-3 rounded-lg">
               Save Changes
             </button>
           </Link>

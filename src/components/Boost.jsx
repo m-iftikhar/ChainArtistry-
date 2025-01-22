@@ -19,7 +19,7 @@ function BoostNFTSection() {
           </p>
 
           <div className="flex justify-start">
-            <button className="inline-flex items-center justify-center w-[217px] h-[58px]  rounded-md font-roboto px-4 py-2 bg-red-600 text-[22px] font-normal text-white  hover:bg-red-400">
+            <button className="inline-flex items-center justify-center w-[217px] h-[58px]  rounded-md font-roboto px-4 py-2 bg-button-gradient text-[22px] font-normal text-white ">
               Boost <span className="ml-2 w-[22px] h-[22px]">🚀</span>
             </button>
           </div>

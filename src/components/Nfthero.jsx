@@ -29,30 +29,30 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen font-apex bg-gradient-to-b from-white to-pink-100">
+      <div className="min-h-screen font-apex mt-10  bg-gradient-to-b from-white to-pink-100">
         {/* Hero Section */}
-        <div className="text-center px-4">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-apex font-bold text-gray-800">
+        <div className="text-center   px-4 ">
+          <h1 className="text-2xl sm:text-3xl  lg:text-[64px] font-apex font-normal ">
             CREATE YOUR OWN <span className="text-red-600">MASTERPIECE</span>
           </h1>
         </div>
 
         {/* Centered Image */}
-        <div className="flex justify-center items-center mt-6 px-4 lg:mt-12">
+        <div className="flex justify-center items-center mt-10 px-4 lg:mt-12">
           <img
-            className="rounded-lg shadow-md w-full sm:w-[90%] md:w-[80%] lg:w-[1320px] object-cover"
+            className="rounded-lg shadow-md w-full sm:w-[90%] md:w-[80%] lg:w-[1320px] lg:h-[496px] object-cover"
             src={nfthero}
             alt="NFT"
           />
         </div>
 
-        <div className="text-center font-roboto mt-4 text-gray-700 text-sm sm:text-base">
+        <div className="text-center font-roboto mt-4 text-gray-600 font-normal text-[18px] sm:text-base">
           Get OnBoard And Earn Money Like Pro
         </div>
 
         {/* Search Bar */}
         <div className="mt-8 px-4 sm:px-6">
-          <div className="bg-gray-100 rounded-lg font-apex flex items-center p-4 shadow-md w-full max-w-lg mx-auto">
+          <div className="bg-gray-100 rounded-lg font-apex flex items-center p-4 shadow-md w-full md:w-[1002px] md:h-[70px]  mx-auto">
             <input
               type="text"
               placeholder="Fantasy Creature holding a sword..."
@@ -69,25 +69,25 @@ function App() {
 
         {/* Dropdowns and Add Styles Button */}
         <div className="flex flex-wrap justify-evenly items-center mt-8 space-y-4 sm:space-y-0 sm:space-x-4 px-4">
-          <div className="bg-gray-100 rounded-lg p-2 font-roboto shadow-md w-full sm:w-auto">
+          <div className="bg-gray-100 rounded-lg p-2 md:w-[202px] justify-center text-center pt-4 md:h-[58px] font-roboto shadow-md w-full sm:w-auto">
             <select className="w-full sm:w-auto bg-transparent outline-none text-gray-700 font-apex cursor-pointer">
               <option>Single NFT</option>
               <option>Batch NFT</option>
             </select>
           </div>
 
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center  space-x-2">
             <span className="text-gray-700 font-apex">Supply</span>
             <input
               type="number"
               defaultValue="10"
-              className="bg-gray-100 rounded-lg p-2 outline-none shadow-md w-16 text-center"
+              className="bg-gray-100 rounded-lg p-2 w-[139px] h-[58px] outline-none shadow-md  text-center"
             />
           </div>
 
           <button
             onClick={handleAddStylesClick}
-            className="flex items-center bg-gray-100 rounded-lg p-2 shadow-md space-x-2"
+            className="flex items-center bg-gray-100 w-[198px] h-[58px] text-center justify-center rounded-lg p-2 shadow-md space-x-2"
           >
             <span className="text-gray-700 font-roboto">Add Styles</span>
             <FaPlus className="text-gray-700" />
@@ -217,7 +217,7 @@ function App() {
                 <Link to="/nftpagemint">
                   <button
                     onClick={handleCloseModal}
-                    className="bg-red-600 text-white py-2 px-6 rounded-xl font-roboto mr-11 hover:bg-red-700 mx-auto"
+                    className="bg-button-gradient text-white py-2 px-6 rounded-xl font-roboto mr-11 hover:bg-red-700 mx-auto"
                   >
                     Confirm
                   </button>
