@@ -77,7 +77,7 @@ const FeatureCollection = () => {
                 <img
                   src={card.img}
                   alt={`Card ${card.id}`}
-                  className="rounded-lg shadow-lg w-full md:w-[308px] h-auto md:h-[411px] object-cover"
+                  className="rounded-lg  w-full md:w-[308px] h-auto md:h-[411px] object-cover"
                 />
               </div>
             ))}

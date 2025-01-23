@@ -109,10 +109,8 @@ const Navbar = () => {
         ) : (
           <>
             <button
-            // style={{
-            //   background: "linear-gradient(318deg, #fd0000 26.88%, #ff9292 105.85%)",
-            // }}
-              className="bg-button-gradient text-white px-4 py-2 font-roboto text-[22px]  w-[213px] h-[58px] rounded-md shadow-md hover:bg-red-40000"
+            
+              className="bg-button-gradient text-white px-4 py-2 font-roboto text-[22px]  w-[213px] h-[58px] rounded-md shadow-md "
               onClick={toggleModal}
             >
               Connect Wallet
