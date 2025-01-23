@@ -49,14 +49,14 @@ const Hero = () => {
           style={{ marginTop: "20px" }}
         >
           <img
-            src={heroimage2}
+            src={heroimage5}
             alt="Hero Image 4"
             className="relative z-10 rounded-lg w-full h-full"
           />
         </div>
 
         <img
-          src={heroimage5}
+          src={heroimage2}
           alt="Hero Image 1"
           className="relative z-20 rounded-lg w-[308.36px] h-[410.96px] animation-u-to-d md:w-[308.36px] md:h-[410.96px] md:left-0"
           style={{
@@ -70,7 +70,7 @@ const Hero = () => {
         />
 
         <div
-          className="absolute transform rotate-4 right-[70px] top-[19.04px] w-[266.67px] h-[355.31px] z-10 animation-r-to-l md:transform-none md:right-[70px] md:top-[19.04px] md:rotate-0"
+          className="absolute transform rotate-4 right-[70px] top-[19.04px] w-[266.67px] h-[355.31px] z-10 animation-r-to-l md:transform-none md:right-[90px] md:top-[19.04px] md:rotate-0"
           style={{ marginTop: "20px" }}
         >
           <img
