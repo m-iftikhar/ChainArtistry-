@@ -3,3 +3,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    height: 100%; /* Ensure scrolling works across the entire page */
+  }
+  
+  body {
+    overflow: hidden; /* Hide the scrollbar */
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Webkit browsers (Chrome, Safari) */
+  }
+  
+  body {
+    overflow-y: scroll; /* Enable vertical scrolling, but hide the scrollbar */
+  }
+  
+    
