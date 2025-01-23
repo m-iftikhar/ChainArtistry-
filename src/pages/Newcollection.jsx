@@ -37,7 +37,7 @@ const Newcollection = () => {
 
       {/* Right Section (Form Section) */}
       <div
-        className="rounded-lg shadow-md bg-white p-4 sm:p-6 md:p-8 w-full lg:max-w-[944px]"
+        className="rounded-lg shadow-md bg-white p-4 sm:p-6 mt-[100px] md:p-8 w-full lg:max-w-[944px]"
       >
         <h1 className="text-2xl sm:text-3xl font-bold font-apex text-center mb-4">
           CREATE A COLLECTION

@@ -4,7 +4,7 @@ import Trendings from '../components/Trendings';
 
 const Boost = () => {
   return (
-    <div className="min-h-screen p-4 gap-6">
+    <div className="min-h-screen p-4 gap-6 mt-[100px]">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Left Side */}
         <div>

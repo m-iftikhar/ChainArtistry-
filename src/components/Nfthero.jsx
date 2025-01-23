@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen font-apex mt-10  bg-gradient-to-b from-white to-pink-100">
+      <div className="min-h-screen font-apex mt-[150px]  bg-gradient-to-b from-white to-pink-100">
         {/* Hero Section */}
         <div className="text-center   px-4 ">
           <h1 className="text-2xl sm:text-3xl  lg:text-[64px] font-apex font-normal ">

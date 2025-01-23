@@ -24,7 +24,7 @@ const Jacob = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center relative">
+    <div className="flex flex-col items-center mt-[100px] justify-center relative">
       <div
   className="flex flex-col items-center justify-center mt-8"
   style={{

@@ -8,7 +8,7 @@ const Nftmint = () => {
   const images = [mint1, mint2, mint3, mint4, mint1, mint2, mint3, mint4, mint1, mint2];
 
   return (
-    <div className="w-full px-4 py-6 sm:px-6 md:px-8 lg:px-10 mx-auto font-roboto">
+    <div className="w-full px-4 py-6 sm:px-6 md:px-8 lg:px-10 mx-auto font-roboto mt-[120px]">
       {/* Top Section */}
       <div className="flex flex-col gap-6 sm:flex-row justify-between items-center">
         <div className="flex flex-wrap gap-4 items-center text-gray-600">

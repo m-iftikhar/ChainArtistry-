@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const ChooseCollection = () => {
   return (
-    <div className="flex justify-center items-center min-h-[150vh] bg-gradient-to-b from-pink-100 to-pink-200">
+    <div className="flex justify-center items-center min-h-[150vh] mt-[50px] bg-gradient-to-b from-pink-100 to-pink-200">
 
       {/* Main Box Container */}
       <div className="relative flex flex-col items-center bg-white shadow-lg w-full  max-w-[1164px] h-[730px] p-6 rounded-lg">

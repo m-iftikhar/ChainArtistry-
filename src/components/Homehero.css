@@ -39,11 +39,13 @@
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
-  .hero-images-container {
-    display: none; /* Hide images and animations */
-  }
+   .hero-images-container {
+    display: none; 
+   }
+  
 
   .hands-background {
-    display: none; /* Hide background image */
+    display: none;  
   }
 }
+

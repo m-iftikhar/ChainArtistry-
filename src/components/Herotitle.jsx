@@ -2,7 +2,7 @@
 
 const Herotitle = () => {
   return (
-    <div className="h-[200px]   flex flex-col items-center  justify-center text-center px-6 ">
+    <div className="h-[200px] mt-[100px]  flex flex-col items-center  justify-center text-center px-6 ">
       {/* First Line: Discover & Share */}
       <h1 className="text-4xl font-apex md:text-[96px] font-normal text-gray-800  md:mt-16">
         DISCOVER CREATE &

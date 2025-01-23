@@ -4,7 +4,7 @@ import banner from "../assets/banner.png";
 
 function Profiletop() {
   return (
-    <div className="flex flex-col items-center w-full px-4">
+    <div className="flex flex-col items-center mt-[100px] w-full px-4">
       {/* Buttons Section */}
       <div
         className="flex space-x-4 mt-3 border border-gray-400 rounded-md p-2 sm:absolute sm:top-[140px] sm:left-[300px] sm:gap-0"

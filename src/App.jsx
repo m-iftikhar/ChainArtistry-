@@ -19,6 +19,8 @@ import Explore from "./pages/Explore";
 import Scrollogic from "./components/Scrollogoc";
 
 const App = () => {
+ 
+  
   return (
     <Router>
       <Scrollogic/>

@@ -5,7 +5,7 @@ import Trendings from "../components/Trendings";
 import Auction from '../components/Auction';
 import TopCollections from "../components/TopCollection";
 import Recentlysold from "../components/Recentlysold";
-// import DigitalAsset from '../components/DigitalAsset'
+import DigitalAsset from '../components/DigitalAsset'
 import Boost from "../components/Boost"
 import Questions from '../components/Questions'
 import Footer from "../components/Footer";
@@ -22,7 +22,7 @@ const Home = () => {
       <Auction title="Auctions"/>
       <TopCollections/>
       <Recentlysold/>
-      {/* <DigitalAsset/> */}
+      <DigitalAsset/>
       <Boost/>
       <Questions/>
       <Footer/>

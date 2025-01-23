@@ -32,7 +32,7 @@ const Setting = () => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full px-4   sm:px-6 md:px-8 lg:px-12 xl:px-16">
+    <div className="flex flex-col items-center w-full px-4 mt-[100px]   sm:px-6 md:px-8 lg:px-12 xl:px-16">
       {/* Buttons Section */}
       <div className="flex space-x-4 mt-6 border border-gray-400 rounded-md p-2 sm:absolute sm:top-[140px] sm:left-[300px] sm:gap-0">
         <Link to="/profile">

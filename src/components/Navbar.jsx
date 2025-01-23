@@ -20,9 +20,9 @@ const Navbar = () => {
   const isMintPage = location.pathname === '/mintdata' || location.pathname === '/nftpagemint' || location.pathname === '/choosecollection' || location.pathname === '/newcollection' || location.pathname === '/profile' || location.pathname === '/setting' || location.pathname === '/sellmethod' || location.pathname === '/nftpage';
 
   return (
-    <div className="w-full h-[100px] flex items-center justify-between px-4 bg-white shadow-lg">
+    <div className="w-full h-[100px] flex  items-center justify-between  px-4 fixed top-0 left-0 z-50 backdrop-blur-md bg-opacity-80 ">
       {/* Logo */}
-      <div className="flex flex-col items-center h-[100px] w-[99px] mt-[10px]  ">
+      <div className="flex flex-col items-center h-[100px] w-[99px] mt-[20px]  ">
         <img src={logo} alt="Logo" className="h-[60px] w-auto" />
         <img src={logotext} alt="logotext" className="h-[20px] w-auto" />
       </div>

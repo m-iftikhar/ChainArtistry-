@@ -3,7 +3,7 @@ import nextcollectionmain from '../assets/nextcollectionmain.png';
 const Herotop = () => {
   return (
     <div
-      className="flex flex-col-reverse lg:flex-row items-center justify-center mx-auto mt-10 px-4 sm:px-6 md:px-8 lg:px-10"
+      className="flex flex-col-reverse lg:flex-row items-center justify-center mx-auto mt-[200px] px-4 sm:px-6 md:px-8 lg:px-10"
       style={{ width: '100%', height: 'auto', maxWidth: '1280px' }}
     >
       {/* Text Section */}

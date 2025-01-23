@@ -15,7 +15,7 @@ const Mintdata = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-start p-4 sm:p-6 md:p-8 gap-6 sm:gap-8 bg-gradient-to-b from-pink-50 to-pink-200 min-h-screen">
+    <div className="flex flex-col lg:flex-row justify-center mt-[100px] items-start p-4 sm:p-6 md:p-8 gap-6 sm:gap-8 bg-gradient-to-b from-pink-50 to-pink-200 min-h-screen">
        <Link  to="/nftpagemint">   <button
           className="absolute top-28 left-3 bg-white text-[20px] font-normal w-[126px] h-[64px] px-4 py-2 rounded-lg shadow"
         >
