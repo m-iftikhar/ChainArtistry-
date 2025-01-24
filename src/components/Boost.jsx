@@ -1,6 +1,6 @@
 import boost from '../assets/boost.png';
 import proflie from '../assets/proflie.png';
-
+import arrow from '../assets/arrow.png';
 function BoostNFTSection() {
   return (
     <div className="min-h-screen flex items-center justify-center  px-4 py-8 sm:px-6 lg:px-12">
@@ -28,11 +28,12 @@ function BoostNFTSection() {
         {/* Right Section (NFT cards) */}
         <div className="relative flex justify-center items-center">
           {/* Background Blur Effect */}
-          <div className="absolute w-full h-full bg-green-500 opacity-20 rounded-full blur-3xl" />
+          <div className="absolute w-full h-full bg-green-500 opacity-50 rounded-full blur-3xl" />
 
           {/* NFT Cards */}
           <div className="relative flex flex-wrap justify-center gap-8">
             {/* Card 1 */}
+            <img src={arrow} className='w-12 h-12 mt-52 ' />
             <div className="relative bg-white rounded-lg shadow-lg p-2 h-[322px] overflow-hidden w-48 sm:w-56 lg:w-[242px]">
               <div className="p-4 border-b border-gray-300 flex items-center space-x-2">
                 <img src={proflie} alt="Icon" className="w-8 h-8 opacity-60" />
@@ -43,11 +44,14 @@ function BoostNFTSection() {
                 alt="NFT 1"
                 className="w-[228px] h-[247px] rounded-md object-cover bg-red-600 opacity-95"
               />
+              
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white px-4 py-2 flex justify-between items-center">
                 <button className="text-sm font-apex">In Stock: 7</button>
                 <button className="text-sm font-apex">Price: 142.02</button>
               </div>
             </div>
+            <img src={arrow} className='w-20 h-32 mr-10  ' />
+
 
             {/* Card 2 */}
             <div className="relative bg-white rounded-lg shadow-lg overflow-hidden  p-2  h-[322px] w-48 sm:w-56 lg:w-[242px]">
