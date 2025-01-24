@@ -7,7 +7,7 @@ import auction5 from '../assets/auction5.png';
 import auction6 from '../assets/auction6.png';
 import auction7 from '../assets/auction7.png';
 import proflie from '../assets/proflie.png';
-
+import bg from '../assets/bg.png';
 
 const TrendingNFTs = () => {
   const nfts = [
@@ -37,8 +37,13 @@ const TrendingNFTs = () => {
           {nfts.map((nft) => (
             <div
               key={nft.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300 w-full max-w-xs mx-auto border border-gray-200"
-            >
+             style={{
+                                          backgroundImage: `url(${bg})`,
+                                            backgroundSize: "cover",
+                                         backgroundPosition: "center",
+                                            }}
+                           className=" rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300 relative   bg-opacity-50"
+                         >
               {/* Top Section with Icon and Name */}
               <div className="flex items-center gap-4 p-4">
                 <div className=" p-2 rounded-full">

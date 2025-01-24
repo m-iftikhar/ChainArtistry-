@@ -1,23 +1,37 @@
-
 import PropTypes from 'prop-types';
 import logo from '../assets/logo.png';
 import connectlogo1 from '../assets/connectlogo1.png';
 import connectlogo2 from '../assets/connectlogo2.png';
 import connectlog3 from '../assets/connectlogo3.png';
 import connectlogo4 from '../assets/connectlogo4.png';
-
-
-
-
-
+import { useState, useEffect } from 'react';
+import { connectToWalletConnect } from '../Connections/walletConnect';
 
 const Connect = ({ toggleModal }) => {
-  
-  
-  
+  const [successMessage, setSuccessMessage] = useState('');
+
+  useEffect(() => {
+    if (successMessage) {
+      const timer = setTimeout(() => {
+        setSuccessMessage('');
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [successMessage]);
+
+  const connectWalletConnect = async () => {
+    try {
+      const connector = await connectToWalletConnect();
+      if (connector.connected) {
+        setSuccessMessage('WalletConnect connected successfully!');
+      }
+    } catch (error) {
+      console.error('Failed to connect to WalletConnect:', error);
+    }
+  };
 
   return (
-    <div className="fixed inset-0 flex items-center mt-[270px] justify-center bg-black  bg-opacity-50 z-50">
+    <div className="fixed inset-0 flex items-center mt-[270px] justify-center bg-black bg-opacity-50 z-50">
       <div className="bg-white rounded-lg shadow-lg p-6 w-80 relative">
         {/* Close Button */}
         <button
@@ -39,12 +53,8 @@ const Connect = ({ toggleModal }) => {
         {/* Wallet Options */}
         <div className="mt-6 space-y-3">
           {/* Pera Wallet Option */}
-          <div
-            className="relative cursor-pointer"
-             // Connect Pera Wallet on click
-          >
+          <div className="relative cursor-pointer">
             <img
-            
               src={connectlogo1}
               alt="Pera Logo"
               className="absolute left-2 top-1/2 transform -translate-y-1/2 h-6"
@@ -86,7 +96,7 @@ const Connect = ({ toggleModal }) => {
             />
           </div>
 
-          <div className="relative">
+          <div className="relative cursor-pointer" onClick={connectWalletConnect}>
             <img
               src={connectlogo4}
               alt="WalletConnect Logo"

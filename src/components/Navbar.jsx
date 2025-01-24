@@ -6,7 +6,6 @@ import Connect from '../components/Connect';
 import logoother1 from '../assets/logoother1.png';
 import logoother2 from '../assets/logoother2.png';
 
-
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,13 +15,22 @@ const Navbar = () => {
     setIsModalOpen((prev) => !prev); // Toggle the modal state
   };
 
-  // Check if the current route is "/mintdata" or "/nftmint"
-  const isMintPage = location.pathname === '/mintdata' || location.pathname === '/nftpagemint' || location.pathname === '/choosecollection' || location.pathname === '/newcollection' || location.pathname === '/profile' || location.pathname === '/setting' || location.pathname === '/sellmethod' || location.pathname === '/nftpage';
+  // Check if the current route is one of the specified paths
+  const isMintPage = [
+    '/mintdata',
+    '/nftpagemint',
+    '/choosecollection',
+    '/newcollection',
+    '/profile',
+    '/setting',
+    '/sellmethod',
+    '/nftpage',
+  ].includes(location.pathname);
 
   return (
-    <div className="w-full h-[100px] flex  items-center justify-between  px-4 fixed top-0 left-0 z-50 backdrop-blur-[50px] bg-opacity-80 ">
+    <div className="w-full h-[100px] flex items-center justify-between px-4 fixed top-0 left-0 z-50 backdrop-blur-[50px] bg-opacity-80">
       {/* Logo */}
-      <div className="flex flex-col items-center h-[100px] w-[99px] mt-[20px]  ">
+      <div className="flex flex-col items-center h-[100px] w-[99px] mt-[20px]">
         <img src={logo} alt="Logo" className="h-[60px] w-auto" />
         <img src={logotext} alt="logotext" className="h-[20px] w-auto" />
       </div>
@@ -39,7 +47,7 @@ const Navbar = () => {
             }`
           }
         >
-          home
+          Home
         </NavLink>
         <NavLink
           to="/nftpage"
@@ -51,7 +59,7 @@ const Navbar = () => {
             }`
           }
         >
-          AI NFT GENERATION
+          AI NFT Generation
         </NavLink>
       </div>
 
@@ -87,37 +95,37 @@ const Navbar = () => {
       </div>
 
       {/* Conditional Rendering for Logos or Buttons */}
-      <div className="hidden md:flex space-x-4 font-roboto ">
+      <div className="hidden md:flex space-x-4 font-roboto">
         {isMintPage ? (
           <>
-          <div className='bg-gray-300 w-[76px] h-[58px] rounded-lg gap-[10px] px-[26px] py-[14px] '>
-            <img
-              src={logoother2}
-              alt="logoother1"
-              className="w-[26px] h-[26px] object-contain "
-            />
+            <div className="bg-gray-300 w-[76px] h-[58px] rounded-lg gap-[10px] px-[26px] py-[14px]">
+              <img
+                src={logoother2}
+                alt="logoother1"
+                className="w-[26px] h-[26px] object-contain"
+              />
             </div>
-            <div className='bg-gray-300 w-[76px] h-[58px] rounded-lg px-[26px] py-[14px] '>
-          <Link to="/profile">  <img
-          
-              src={logoother1}
-              alt="logoother2"
-              className=" w-[26px] h-[26px] object-contain"
-            /></Link>
-              </div>
+            <div className="bg-gray-300 w-[76px] h-[58px] rounded-lg px-[26px] py-[14px]">
+              <Link to="/profile">
+                <img
+                  src={logoother1}
+                  alt="logoother2"
+                  className=" w-[26px] h-[26px] object-contain"
+                />
+              </Link>
+            </div>
           </>
         ) : (
           <>
             <button
-            
-              className="bg-button-gradient text-white px-4 py-2 font-roboto text-[22px]  w-[213px] h-[58px] rounded-md shadow-md "
+              className="bg-button-gradient text-white px-4 py-2 font-roboto text-[22px] w-[213px] h-[58px] rounded-md shadow-md"
               onClick={toggleModal}
             >
               Connect Wallet
             </button>
             <Link
               to="/mintdata"
-              className="bg-white  text-red-600 border border-red-600 text-center   w-[176px] h-[58px] px-4 py-2 rounded-md shadow-md font-roboto text-[22px]"
+              className="bg-white text-red-600 border border-red-600 text-center w-[176px] h-[58px] px-4 py-2 rounded-md shadow-md font-roboto text-[22px]"
             >
               Create NFT
             </Link>
@@ -139,7 +147,7 @@ const Navbar = () => {
             }
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            HOME
+            Home
           </NavLink>
           <NavLink
             to="/nftpage"
@@ -152,19 +160,19 @@ const Navbar = () => {
             }
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            AI NFT GENERATION
+            AI NFT Generation
           </NavLink>
           {isMintPage ? (
             <>
               <img
                 src={logoother1}
                 alt="logoother1"
-                className=" w-[26px] h-[26px] object-contain"
+                className="w-[26px] h-[26px] object-contain"
               />
               <img
                 src={logoother2}
                 alt="logoother2"
-                className=" w-[26px] h-[26px] object-contain"
+                className="w-[26px] h-[26px] object-contain"
               />
             </>
           ) : (

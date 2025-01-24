@@ -8,6 +8,7 @@ import trending7 from "../assets/trending7.png";
 import trending8 from "../assets/trending8.png";
 import proflie from "../assets/proflie.png";
 import PropTypes from "prop-types";
+import bg from '../assets/bg.png'
 
 const Trendings = ({ title }) => {
   const nfts = [
@@ -37,7 +38,12 @@ const Trendings = ({ title }) => {
           {nfts.map((nft) => (
             <div
               key={nft.id}
-              className="bg-white rounded-lg shadow-lg w-full h-auto overflow-hidden hover:scale-105 transform transition duration-300 relative border border-gray-200"
+              style={{
+                             backgroundImage: `url(${bg})`,
+                               backgroundSize: "cover",
+                            backgroundPosition: "center",
+                               }}
+              className=" rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300 relative   bg-opacity-50"
             >
               {/* Top Section with Icon and Name */}
               <div className="flex items-center gap-4 p-4">
