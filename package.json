@@ -13,6 +13,8 @@
     "@perawallet/connect": "^1.4.1",
     "@walletconnect/client": "^1.8.0",
     "@walletconnect/qrcode-modal": "^1.8.0",
+    "@web3modal/ethereum": "^2.7.1",
+    "@web3modal/react": "^2.7.1",
     "buffer": "^6.0.3",
     "ethers": "^6.13.5",
     "isomorphic-ws": "^5.0.0",
@@ -21,6 +23,8 @@
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.1",
+    "viem": "^2.22.13",
+    "wagmi": "^2.14.9",
     "ws": "^8.18.0"
   },
   "devDependencies": {

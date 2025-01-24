@@ -5,10 +5,12 @@ import connectlogo2 from '../assets/connectlogo2.png';
 import connectlog3 from '../assets/connectlogo3.png';
 import connectlogo4 from '../assets/connectlogo4.png';
 import { useState, useEffect } from 'react';
+import { getPeraWalletInstance } from '../Connections/peraWallet';
 import { connectToWalletConnect } from '../Connections/walletConnect';
 
 const Connect = ({ toggleModal }) => {
   const [successMessage, setSuccessMessage] = useState('');
+  const peraWallet = getPeraWalletInstance();
 
   useEffect(() => {
     if (successMessage) {
@@ -27,6 +29,20 @@ const Connect = ({ toggleModal }) => {
       }
     } catch (error) {
       console.error('Failed to connect to WalletConnect:', error);
+    }
+  };
+
+  const connectPeraWallet = async () => {
+    try {
+      const accounts = await peraWallet.connect();
+      console.log('Connected accounts:', accounts);
+      setSuccessMessage('Pera Wallet connected successfully!');
+      toggleModal(); // Close the modal after success
+    } catch (error) {
+      console.error('Failed to connect to Pera Wallet:', error);
+      if (error?.data?.type === 'CONNECT_MODAL_CLOSED') {
+        console.warn('User closed the Pera Wallet connect modal.');
+      }
     }
   };
 
@@ -53,7 +69,7 @@ const Connect = ({ toggleModal }) => {
         {/* Wallet Options */}
         <div className="mt-6 space-y-3">
           {/* Pera Wallet Option */}
-          <div className="relative cursor-pointer">
+          <div className="relative cursor-pointer" onClick={connectPeraWallet}>
             <img
               src={connectlogo1}
               alt="Pera Logo"
@@ -73,6 +89,7 @@ const Connect = ({ toggleModal }) => {
               src={connectlogo2}
               alt="Defly Logo"
               className="absolute left-2 top-1/2 transform -translate-y-1/2 h-6"
+              onClick={() => window.open("https://defly-connect-example.blockshake.name/", "_blank")}
             />
             <input
               type="text"
@@ -86,6 +103,7 @@ const Connect = ({ toggleModal }) => {
             <img
               src={connectlog3}
               alt="Daffi Logo"
+              onClick={() => window.open("https://web.daffiwallet.app/", "_blank")}
               className="absolute left-2 top-1/2 transform -translate-y-1/2 h-6"
             />
             <input
@@ -96,6 +114,7 @@ const Connect = ({ toggleModal }) => {
             />
           </div>
 
+          {/* WalletConnect Option */}
           <div className="relative cursor-pointer" onClick={connectWalletConnect}>
             <img
               src={connectlogo4}
