@@ -4,47 +4,10 @@ import connectlogo1 from '../assets/connectlogo1.png';
 import connectlogo2 from '../assets/connectlogo2.png';
 import connectlog3 from '../assets/connectlogo3.png';
 import connectlogo4 from '../assets/connectlogo4.png';
-import { useState, useEffect } from 'react';
-import { getPeraWalletInstance } from '../Connections/peraWallet';
-import { connectToWalletConnect } from '../Connections/walletConnect';
+
 
 const Connect = ({ toggleModal }) => {
-  const [successMessage, setSuccessMessage] = useState('');
-  const peraWallet = getPeraWalletInstance();
-
-  useEffect(() => {
-    if (successMessage) {
-      const timer = setTimeout(() => {
-        setSuccessMessage('');
-      }, 3000);
-      return () => clearTimeout(timer);
-    }
-  }, [successMessage]);
-
-  const connectWalletConnect = async () => {
-    try {
-      const connector = await connectToWalletConnect();
-      if (connector.connected) {
-        setSuccessMessage('WalletConnect connected successfully!');
-      }
-    } catch (error) {
-      console.error('Failed to connect to WalletConnect:', error);
-    }
-  };
-
-  const connectPeraWallet = async () => {
-    try {
-      const accounts = await peraWallet.connect();
-      console.log('Connected accounts:', accounts);
-      setSuccessMessage('Pera Wallet connected successfully!');
-      toggleModal(); // Close the modal after success
-    } catch (error) {
-      console.error('Failed to connect to Pera Wallet:', error);
-      if (error?.data?.type === 'CONNECT_MODAL_CLOSED') {
-        console.warn('User closed the Pera Wallet connect modal.');
-      }
-    }
-  };
+ 
 
   return (
     <div className="fixed inset-0 flex items-center mt-[270px] justify-center bg-black bg-opacity-50 z-50">
@@ -69,7 +32,7 @@ const Connect = ({ toggleModal }) => {
         {/* Wallet Options */}
         <div className="mt-6 space-y-3">
           {/* Pera Wallet Option */}
-          <div className="relative cursor-pointer" onClick={connectPeraWallet}>
+          <div className="relative cursor-pointer" >
             <img
               src={connectlogo1}
               alt="Pera Logo"
@@ -115,7 +78,7 @@ const Connect = ({ toggleModal }) => {
           </div>
 
           {/* WalletConnect Option */}
-          <div className="relative cursor-pointer" onClick={connectWalletConnect}>
+          <div className="relative cursor-pointer" >
             <img
               src={connectlogo4}
               alt="WalletConnect Logo"
