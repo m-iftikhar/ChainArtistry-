@@ -5,6 +5,13 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   define: {
-    global: {},
+    global: 'window',  // Polyfill global to window for the browser
   },
+  optimizeDeps: {
+    include: [
+      'crypto',  // Add other Node.js modules if needed
+      'stream',
+      // You can add other libraries that are being problematic here
+    ]
+  }
 });
