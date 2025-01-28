@@ -4,10 +4,49 @@ import connectlogo1 from '../assets/connectlogo1.png';
 import connectlogo2 from '../assets/connectlogo2.png';
 import connectlog3 from '../assets/connectlogo3.png';
 import connectlogo4 from '../assets/connectlogo4.png';
+import { getPeraWalletInstance } from '../utils/peraWallet';
+import { connectToWalletConnect } from '../utils/walletConnect';
 
+import { useState,useEffect } from 'react';
 
 const Connect = ({ toggleModal }) => {
+  const [successMessage, setSuccessMessage] = useState('');
+  const peraWallet = getPeraWalletInstance();
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+
  
+
+  
+  useEffect(() => {
+    if (successMessage) {
+      const timer = setTimeout(() => {
+        setSuccessMessage('');
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [successMessage]);
+ 
+  const connectPeraWallet = async () => {
+    try {
+      const accounts = await peraWallet.connect();
+      console.log('Connected accounts:', accounts);
+      setSuccessMessage('Wallet connected successfully!');
+      
+    } catch (error) {
+      console.error('Failed to connect to Pera Wallet:', error);
+    }
+  };
+  const connectWalletConnect = async () => {
+    try {
+      const connector = await connectToWalletConnect();
+      if (connector.connected) {
+        setSuccessMessage('WalletConnect connected successfully!');
+        
+      }
+    } catch (error) {
+      console.error('Failed to connect to WalletConnect:', error);
+    }
+  };
 
   return (
     <div className="fixed inset-0 flex items-center mt-[270px] justify-center bg-black bg-opacity-50 z-50">
@@ -37,6 +76,7 @@ const Connect = ({ toggleModal }) => {
               src={connectlogo1}
               alt="Pera Logo"
               className="absolute left-2 top-1/2 transform -translate-y-1/2 h-6"
+              onClick={connectPeraWallet}
             />
             <input
               type="text"
@@ -83,6 +123,7 @@ const Connect = ({ toggleModal }) => {
               src={connectlogo4}
               alt="WalletConnect Logo"
               className="absolute left-2 top-1/2 transform -translate-y-1/2 h-6"
+              onClick={connectWalletConnect}
             />
             <input
               type="text"
