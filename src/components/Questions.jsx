@@ -1,64 +1,54 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const FAQ = () => {
-  const [open, setOpen] = useState("What is an NFT?");
+  const [open, setOpen] = useState(null);
 
   const toggle = (question) => {
-    setOpen(open === question ? "" : question);
+    setOpen(open === question ? null : question);
   };
 
   const faqs = [
     {
       question: "What is an NFT?",
-      answer:
-        "An NFT (Non-Fungible Token) is a unique digital asset stored on the blockchain, representing ownership of items like art, music, or collectibles.",
+      answer: "An NFT (Non-Fungible Token) is a unique digital asset stored on the blockchain.",
     },
     {
       question: "How do I buy an NFT?",
-      answer:
-        "To buy an NFT, set up a crypto wallet, connect it to an NFT marketplace, and use cryptocurrency to purchase your desired NFT.",
+      answer: "Set up a crypto wallet, connect to an NFT marketplace, and purchase using cryptocurrency.",
     },
     {
-      question: "How do I sell an NFT?",
-      answer:
-        "To sell an NFT, list it on an NFT marketplace, set your price, and wait for a buyer to complete the transaction.",
+      question: "How to buy  an NFT?",
+      answer: "An NFT (Non-Fungible Token) is a unique digital asset stored on the blockchain.",
     },
     {
-      question: "What cryptocurrencies do you accept?",
-      answer:
-        "We accept popular cryptocurrencies like Ethereum, Bitcoin, and USDT, but the specific options depend on the marketplace.",
+      question: "which is website of  an NFT?",
+      answer: "Set up a crypto wallet, connect to an NFT marketplace, and purchase using cryptocurrency.",
     },
   ];
 
   return (
     <div className="text-white flex items-center justify-center px-4 py-6">
       <div className="w-full max-w-3xl">
-        <h1 className="text-3xl md:text-6xl font-bold  text-black font-apex mb-6 text-center">
+        <h1 className="text-3xl md:text-6xl font-bold text-black font-apex mb-6 text-center">
           FREQUENTLY ASKED QUESTIONS
         </h1>
         {faqs.map((faq) => (
-          <div
-            key={faq.question}
-            className={`border ${
-              open === faq.question ? "border-gray-400" : "border-gray-700"
-            } rounded-md mb-4 font-roboto overflow-hidden`}
-          >
+          <div key={faq.question} className="border border-gray-300 rounded-lg mb-4 overflow-hidden">
             <div
-              className={`flex justify-between text-black items-center p-4 cursor-pointer ${
-                open === faq.question ? "bg-pink-200" : "bg-white"
-              }`}
+              className="flex justify-between md:[w-1037px] md:h-[106px] text-black items-center p-4 cursor-pointer bg-white"
               onClick={() => toggle(faq.question)}
             >
-              <h2 className="text-base sm:text-lg md:text-xl font-bold">{faq.question}</h2>
-              <span className="text-lg">{open === faq.question ? "-" : "+"}</span>
+              <h2 className="text-lg font-bold">{faq.question}</h2>
+              <span className="text-xl">{open === faq.question ? "-" : "+"}</span>
             </div>
-            {open === faq.question && (
-              <div className="p-4 bg-white">
-                <p className="text-gray-500 text-sm sm:text-base md:text-lg">
-                  {faq.answer}
-                </p>
-              </div>
-            )}
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: open === faq.question ? "auto" : 0, opacity: open === faq.question ? 1 : 0 }}
+              className="overflow-hidden bg-gray-100 "
+            >
+              <p className="p-4 text-gray-700 md:h-[113px]">{faq.answer}</p>
+            </motion.div>
           </div>
         ))}
       </div>

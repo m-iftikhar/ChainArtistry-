@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Newcollection = () => {
   return (
-    <div className="flex flex-col lg:flex-row py-10 justify-center items-start px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 bg-gradient-to-b from-pink-50 to-pink-200 min-h-screen relative">
+    <div className="flex flex-col lg:flex-row py-10  mt-[100px] justify-center items-start px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 bg-gradient-to-b from-pink-50 to-pink-200 min-h-screen relative">
       {/* Back Button */}
       <Link to="/mintdata">
         <button className="absolute top-3 left-3 bg-red-500 text-white text-sm font-medium px-4 py-2 rounded-lg shadow">

@@ -9,16 +9,16 @@ const ChooseCollection = () => {
     <div className="flex justify-center items-center min-h-[150vh] mt-[50px] bg-gradient-to-b from-pink-100 to-pink-200">
 
       {/* Main Box Container */}
-      <div className="relative flex flex-col items-center bg-white shadow-lg w-full  max-w-[1164px] h-[730px] p-6 rounded-lg">
+      <div className="relative flex flex-col items-center  bg-white shadow-lg w-full  max-w-[1164px] h-[730px] p-6 rounded-lg">
         {/* Back Button (inside the box, aligned to the left side) */}
         <Link to="/mintdata">
-          <button className="absolute left-6 top-6 border border-black bg-white w-[100px] h-[50px] rounded-md font-medium">
+          <button className="absolute left-6 top-16  border border-black bg-white w-[100px] h-[50px] rounded-md font-medium">
             Back
           </button>
         </Link>
 
         {/* Heading Text */}
-        <h1 className="text-3xl font-semibold mb-8 font-apex">CHOOSE COLLECTION</h1>
+        <h1 className="text-3xl  font-semibold  mb-16  font-apex">CHOOSE COLLECTION</h1>
 
         {/* Collection Divs */}
         <div className="space-y-4 w-full font-roboto">

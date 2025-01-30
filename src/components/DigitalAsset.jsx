@@ -18,7 +18,7 @@ function App() {
 
 
         {/* Search Bar */}
-        <div className="relative inline-block z-10 mb-6 mt-8 w-full">
+        <div className="relative inline-block z-10 mb-6  w-full">
   <input
     type="text"
     placeholder="Fantasy Creature holding a sword..."
@@ -82,7 +82,7 @@ function App() {
       </div>
 
       {/* Add margin-bottom to prevent overlap */}
-      <div className="absolute bottom-0 w-full h-16 bg-gray-50"></div>
+      
     </div>
   );
 }
