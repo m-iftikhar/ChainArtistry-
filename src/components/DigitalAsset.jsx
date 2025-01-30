@@ -9,7 +9,7 @@ import digitalasset8 from '../assets/digitalasset8.png';
 
 function App() {
   return (
-    <div className=" md:h-[931px] md:w-[1320px] flex items-center   justify-center p-4  relative">
+    <div className=" h-[931px] w-full flex items-center   justify-center p-4  relative">
       <div className="w-full max-w-4xl text-center relative  ">
         {/* Tagline */}
         <h1 className="text-2xl sm:text-3xl md:text-[64px] lg:text-[64px] font-apex font-normal md:mb-[600px] md:leading-[1]">
