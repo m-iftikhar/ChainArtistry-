@@ -7,7 +7,7 @@ import hands from '../assets/hands.png';
 
 const Hero = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center text-center px-4 py-8 h-screen md:px-2 md:py-8">
+    <div className="relative flex flex-col items-center  justify-center text-center px-4 py-8 h-screen md:px-2 md:py-8">
       {/* Images and Animations */}
       <div
         className="hero-images-container absolute flex flex-col md:flex-row items-center justify-center mt-0"
@@ -106,9 +106,10 @@ const Hero = () => {
           bottom: "-170px", // Adjust this value to move the image down
         }}
       />
-        <div className='mt-0 h-auto w-full  '>
+        <div className='mt-0 flex  h-full w-full '>
   {/* Show the image only on mobile (max-width: 768px), otherwise hidden on larger screens */}
-  <img src={heroimage2} className="block md:hidden" />
+  <img src={heroimage2} className="block md:hidden " />
+  {/* <img src={heroimage2} className="block md:hidden " /> */}
   {/* <img src={heroimage2} className="block md:hidden " /> */}
      </div>
     </div>

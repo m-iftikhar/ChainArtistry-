@@ -23,12 +23,12 @@ const cards = [
 
 const FeatureCollection = () => {
   return (
-    <div className="py-10 px-5 w-full">
+    <div className="py-10 px-5 w-full ">
       <div className="relative max-w-6xl mx-auto">
         {/* Title Section */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-5">
           <div>
-            <h2 className="text-[64px] font-apex font-normal ml-4 md:ml-0">
+            <h2 className="md:text-[64px] text-5xl font-apex font-normal ml-4 md:ml-0">
               Featured Collection
             </h2>
             <p className="text-gray-500 font-roboto ml-4 md:ml-0">

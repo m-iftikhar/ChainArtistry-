@@ -58,7 +58,7 @@ const TopSeller = () => {
     <div className="container max-w-6xl mx-auto px-4 py-8">
       {/* Header Section */}
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl md:text-[64px] font-apex font-normal">TOP SELLER</h2>
+        <h2 className=" md:text-[64px] text-5xl font-apex font-normal">TOP SELLER</h2>
         {/* <Link to='/viewallseller'> */}
         <Link to="/viewseller">
         <h3 className="text-red-500 text-[22px] font-roboto font-bold  cursor-pointer">View All</h3> </Link>

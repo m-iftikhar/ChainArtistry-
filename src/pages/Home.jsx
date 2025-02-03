@@ -13,7 +13,7 @@ import Herotitle from "../components/Herotitle";
 
 const Home = () => {
   return (
-    <div className="bg-gradient-to-b from-white to-pink-200 min-h-screen">
+    <div className="bg-gradient-to-b from-white to-pink-100 min-h-screen">
       <Herotitle/>
       <Hero />
       <Featurecollection/>

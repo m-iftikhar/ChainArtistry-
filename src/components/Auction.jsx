@@ -27,7 +27,7 @@ const TrendingNFTs = () => {
         {/* Heading */}
         <h1
           style={{ marginLeft: '16px' }}
-          className="text-3xl md:text-[64px] font-normal font-apex  mb-8"
+          className="text-5xl md:text-[64px] font-normal font-apex  mb-8"
         >
           Auctions
         </h1>

@@ -34,7 +34,7 @@ const TopCollections = () => {
     <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-4 py-10">
       {/* Header Section */}
       <div className="flex flex-col sm:flex-row justify-between items-center mb-8 text-center sm:text-left">
-        <h2 className="font-apex text-[64px] font-light  leading-[76.8px] tracking-[0.04em] text-left decoration-skip-ink">
+        <h2 className="font-apex md:text-[64px] text-5xl font-light  leading-[76.8px] tracking-[0.04em] text-left decoration-skip-ink">
           Top Collections
         </h2>
         <Link to="/topcollections" className="mt-2 sm:mt-0">

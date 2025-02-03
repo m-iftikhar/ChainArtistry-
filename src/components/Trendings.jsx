@@ -28,7 +28,7 @@ const Trendings = ({ title }) => {
         {/* Heading */}
         <h1
           style={{ marginLeft: "16px" }}
-          className="md:text-[64px] font-apex  font-normmal text-gray-800 mb-8"
+          className="md:text-[64px] font-apex text-5xl  font-normmal text-gray-800 mb-8"
         >
           {title}
         </h1>
