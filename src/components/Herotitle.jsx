@@ -4,12 +4,12 @@ const Herotitle = () => {
   return (
     <div className="h-[200px] mt-[150px]   flex flex-col items-center  justify-center text-center px-6 ">
       {/* First Line: Discover & Share */}
-      <h1 className="text-5xl font-apex md:text-[96px] lg:[96px] font-normal  text-gray-800  md:mt-6">
+      <h1 className="text-6xl font-apex md:text-[96px] lg:[96px] font-normal text-[#2B2B2B]  md:mt-6">
         DISCOVER CREATE &
       </h1>
 
       {/* Second Line: Sell Artworks */}
-      <h1 className="text-5xl font-apex md:text-[96px] lg:[96px] font-normal text-gray-800  ">
+      <h1 className="text-6xl font-apex md:text-[96px] lg:[96px] font-normal text-[#2B2B2B]  ">
         SELL ARTWORKS.
       </h1>
 
